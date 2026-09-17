@@ -196,23 +196,98 @@ function initEnquiryButtons() {
 }
 
 /**
+ * Dynamic Architectural Brick SVG Pattern Generator
+ */
+function createBrickSvgPattern(brick1, brick2, brick3, mortar) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="140" height="64" viewBox="0 0 140 64">
+    <rect width="140" height="64" fill="${mortar}"/>
+    <g>
+      <rect x="2" y="2" width="64" height="26" rx="2" fill="${brick1}"/>
+      <rect x="2" y="2" width="64" height="2" fill="rgba(255,255,255,0.2)"/>
+      <rect x="2" y="26" width="64" height="2" fill="rgba(0,0,0,0.35)"/>
+      
+      <rect x="72" y="2" width="64" height="26" rx="2" fill="${brick2}"/>
+      <rect x="72" y="2" width="64" height="2" fill="rgba(255,255,255,0.2)"/>
+      <rect x="72" y="26" width="64" height="2" fill="rgba(0,0,0,0.35)"/>
+
+      <rect x="-33" y="34" width="64" height="26" rx="2" fill="${brick2}"/>
+      <rect x="-33" y="34" width="64" height="2" fill="rgba(255,255,255,0.2)"/>
+      <rect x="-33" y="58" width="64" height="2" fill="rgba(0,0,0,0.35)"/>
+
+      <rect x="37" y="34" width="64" height="26" rx="2" fill="${brick1}"/>
+      <rect x="37" y="34" width="64" height="2" fill="rgba(255,255,255,0.2)"/>
+      <rect x="37" y="58" width="64" height="2" fill="rgba(0,0,0,0.35)"/>
+
+      <rect x="107" y="34" width="64" height="26" rx="2" fill="${brick3}"/>
+      <rect x="107" y="34" width="64" height="2" fill="rgba(255,255,255,0.2)"/>
+      <rect x="107" y="58" width="64" height="2" fill="rgba(0,0,0,0.35)"/>
+    </g>
+  </svg>`;
+  return `url("data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}")`;
+}
+
+/**
  * Handle Section 5 Decorative MDF Brick Variant Switching
  */
 function initBrickVariantSelector() {
   const swatchButtons = document.querySelectorAll('.variant-swatch-btn');
   const previewFrame = document.getElementById('brickPreviewFrame');
+  const wallPattern = document.getElementById('brickWallPattern');
   const previewName = document.getElementById('brickPreviewName');
   const brickEnquireBtn = document.getElementById('brickEnquireBtn');
 
   if (!swatchButtons.length || !previewFrame || !previewName || !brickEnquireBtn) return;
 
-  const variantStyles = {
-    'Red Brick': 'linear-gradient(135deg, #7A281B 0%, #42120B 100%)',
-    'Rustic Brick': 'linear-gradient(135deg, #5C3224 0%, #30170F 100%)',
-    'Rustic Gray': 'linear-gradient(135deg, #3A3D40 0%, #1F2124 100%)',
-    'White Gray': 'linear-gradient(135deg, #9BA0A3 0%, #686D70 100%)',
-    'Full White': 'linear-gradient(135deg, #E6E4DF 0%, #B8B6B0 100%)'
+  const variantConfigs = {
+    'Red Brick': {
+      bg: 'linear-gradient(135deg, #4A150E 0%, #210906 100%)',
+      b1: '#A33122', b2: '#8A271B', b3: '#B23A29', mortar: '#21110E'
+    },
+    'Rustic Brick': {
+      bg: 'linear-gradient(135deg, #381A11 0%, #170905 100%)',
+      b1: '#6E3929', b2: '#54291B', b3: '#7D4331', mortar: '#1F100B'
+    },
+    'Rustic Gray': {
+      bg: 'linear-gradient(135deg, #2D3033 0%, #131416 100%)',
+      b1: '#4E5358', b2: '#3B3E42', b3: '#5C6268', mortar: '#1A1C1E'
+    },
+    'White Gray': {
+      bg: 'linear-gradient(135deg, #8E949A 0%, #52565A 100%)',
+      b1: '#D4D8DC', b2: '#C0C5C9', b3: '#E1E5E8', mortar: '#80868C'
+    },
+    'Full White': {
+      bg: 'linear-gradient(135deg, #D5D8DF 0%, #9EA2AB 100%)',
+      b1: '#F2F4F7', b2: '#E4E7EC', b3: '#FFFFFF', mortar: '#BABFC7'
+    }
   };
+
+  function updateBrickVariant(variantName) {
+    const config = variantConfigs[variantName];
+    if (!config) return;
+
+    if (wallPattern) {
+      wallPattern.classList.add('switching');
+    }
+
+    setTimeout(() => {
+      previewName.textContent = variantName;
+      previewFrame.style.background = config.bg;
+      if (wallPattern) {
+        wallPattern.style.backgroundImage = createBrickSvgPattern(config.b1, config.b2, config.b3, config.mortar);
+        wallPattern.classList.remove('switching');
+      }
+      brickEnquireBtn.textContent = `ENQUIRE FOR ${variantName.toUpperCase()}`;
+      brickEnquireBtn.setAttribute('data-product-title', `Brick MDF Panel (${variantName})`);
+    }, 120);
+  }
+
+  // Initial load brick pattern setting
+  const initialVariant = document.querySelector('.variant-swatch-btn.active');
+  const defaultName = initialVariant ? initialVariant.getAttribute('data-variant') : 'Red Brick';
+  if (variantConfigs[defaultName] && wallPattern) {
+    const cfg = variantConfigs[defaultName];
+    wallPattern.style.backgroundImage = createBrickSvgPattern(cfg.b1, cfg.b2, cfg.b3, cfg.mortar);
+  }
 
   swatchButtons.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -220,11 +295,8 @@ function initBrickVariantSelector() {
       btn.classList.add('active');
 
       const variantName = btn.getAttribute('data-variant');
-      if (variantName && variantStyles[variantName]) {
-        previewName.textContent = variantName;
-        previewFrame.style.background = variantStyles[variantName];
-        brickEnquireBtn.textContent = `ENQUIRE FOR ${variantName.toUpperCase()}`;
-        brickEnquireBtn.setAttribute('data-product-title', `Brick MDF Panel (${variantName})`);
+      if (variantName) {
+        updateBrickVariant(variantName);
       }
     });
   });

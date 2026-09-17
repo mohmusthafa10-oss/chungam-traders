@@ -1283,10 +1283,31 @@ textarea:focus-visible {
   flex-direction: column;
   justify-content: space-between;
   padding: 24px;
-  transition: background var(--transition-fast);
+  transition: background var(--transition-medium), box-shadow var(--transition-medium);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.brick-wall-pattern {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: 1;
+  pointer-events: none;
+  background-repeat: repeat;
+  background-size: 140px 64px;
+  opacity: 1;
+  transition: opacity 250ms var(--ease-premium), transform 250ms var(--ease-premium);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.65);
+}
+
+.brick-wall-pattern.switching {
+  opacity: 0.2;
+  transform: scale(0.99);
 }
 
 .brick-preview-tag {
+  position: relative;
+  z-index: 2;
   align-self: flex-start;
   padding: 6px 12px;
   background-color: rgba(17, 17, 17, 0.88);
@@ -1300,8 +1321,11 @@ textarea:focus-visible {
 }
 
 .brick-preview-info {
-  background-color: rgba(17, 17, 17, 0.85);
-  backdrop-filter: blur(8px);
+  position: relative;
+  z-index: 2;
+  background-color: rgba(17, 17, 17, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--color-dark-border);
   padding: 16px;
   border-radius: var(--radius-button);
