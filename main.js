@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileHeaderNav();
   initHeaderScroll();
   initCustomCursor();
+  initHeroMaterialSwitcher();
   initScrollObserver();
   initImageFallbacks();
   initEnquiryButtons();
@@ -265,5 +266,73 @@ function initContactCtaForm() {
       const mailtoUrl = `mailto:chungamtraders2018@gmail.com?subject=${encodeURIComponent('Product Enquiry: ' + category)}&body=${encodeURIComponent(formattedMessage)}`;
       window.location.href = mailtoUrl;
     }
+  });
+}
+
+/**
+ * Section 02 Hero Dynamic Material Selector & Image Switcher
+ */
+function initHeroMaterialSwitcher() {
+  const tabs = document.querySelectorAll('.hero-material-selector .material-tab');
+  const heroImg = document.getElementById('heroMaterialImage');
+  const heroVisualPanel = document.getElementById('hero-visual-panel');
+  const floatingCard = document.getElementById('heroFloatingCard');
+  const cardTitle = document.getElementById('cardMaterialTitle');
+  const cardDesc = document.getElementById('cardMaterialDesc');
+
+  if (!tabs.length || !heroImg || !floatingCard) return;
+
+  function selectTab(selectedTab) {
+    if (selectedTab.classList.contains('active')) return;
+
+    tabs.forEach(tab => {
+      tab.classList.remove('active');
+      tab.setAttribute('aria-selected', 'false');
+    });
+
+    selectedTab.classList.add('active');
+    selectedTab.setAttribute('aria-selected', 'true');
+
+    if (heroVisualPanel && selectedTab.id) {
+      heroVisualPanel.setAttribute('aria-labelledby', selectedTab.id);
+    }
+
+    const newImgSrc = selectedTab.getAttribute('data-img');
+    const newAltText = selectedTab.getAttribute('data-alt');
+    const newTitle = selectedTab.getAttribute('data-title');
+    const newDesc = selectedTab.getAttribute('data-desc');
+
+    // Trigger smooth fade & scale transition
+    heroImg.classList.add('switching');
+    floatingCard.classList.add('switching');
+
+    setTimeout(() => {
+      if (newImgSrc) heroImg.src = newImgSrc;
+      if (newAltText) heroImg.alt = newAltText;
+      if (newTitle && cardTitle) cardTitle.textContent = newTitle;
+      if (newDesc && cardDesc) cardDesc.textContent = newDesc;
+
+      heroImg.classList.remove('switching');
+      floatingCard.classList.remove('switching');
+    }, 150);
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => selectTab(tab));
+
+    // Desktop hover preview
+    tab.addEventListener('mouseenter', () => {
+      if (window.matchMedia('(min-width: 1024px) and (hover: hover)').matches) {
+        selectTab(tab);
+      }
+    });
+
+    // Keyboard selection (Enter / Space)
+    tab.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        selectTab(tab);
+      }
+    });
   });
 }

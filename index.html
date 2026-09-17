@@ -121,39 +121,88 @@
     <!-- SECTION 2: HERO SECTION                                            -->
     <!-- ================================================================== -->
     <section class="hero-section" id="home" aria-label="Hero Section">
-      <div class="hero-container">
-        
-        <!-- Hero Content Column -->
-        <div class="hero-content">
-          <span class="hero-eyebrow">THE HUB CHUNGAM TRADERS</span>
+      <div class="hero-wrapper">
+        <div class="hero-container">
           
-          <h1 class="hero-h1">
-            Materials for<br>
-            Better Spaces.
-          </h1>
+          <!-- Hero Content Column -->
+          <div class="hero-content">
+            <span class="hero-eyebrow">THE HUB CHUNGAM TRADERS</span>
+            
+            <div class="hero-h1-wrapper">
+              <span class="h1-accent-line" aria-hidden="true"></span>
+              <h1 class="hero-h1">
+                Materials for<br>
+                Better Spaces.
+              </h1>
+            </div>
 
-          <p class="hero-paragraph">
-            Plywood, kitchen doors and flooring materials for interior and building projects in Pappinisseri, Kannur.
-          </p>
+            <p class="hero-paragraph">
+              Plywood, kitchen doors, flooring and interior panels — for builders, designers and homeowners in Pappinisseri, Kannur.
+            </p>
 
-          <div class="hero-buttons">
-            <a href="#products" class="btn-primary-action">EXPLORE MATERIALS</a>
-            <a href="#enquiry" class="btn-secondary-action">CONTACT US</a>
+            <div class="hero-buttons">
+              <a href="#products" class="btn-primary-action">EXPLORE MATERIALS</a>
+              <a href="#enquiry" class="btn-secondary-action">CONTACT US</a>
+            </div>
+
+            <!-- Material Credibility Line -->
+            <div class="hero-credibility" aria-label="Core material offerings">
+              <span class="cred-item">PLYWOOD</span>
+              <span class="cred-bullet" aria-hidden="true">•</span>
+              <span class="cred-item">KITCHEN DOORS</span>
+              <span class="cred-bullet" aria-hidden="true">•</span>
+              <span class="cred-item">FLOORING</span>
+              <span class="cred-bullet" aria-hidden="true">•</span>
+              <span class="cred-item">PANELS</span>
+            </div>
+
+            <!-- Interactive Material Selector -->
+            <div class="hero-material-selector" role="tablist" aria-label="Showroom Material Selector">
+              <button type="button" class="material-tab active" role="tab" id="tab-plywood" aria-selected="true" aria-controls="hero-visual-panel" data-material="plywood" data-title="Plywood & Board Materials" data-desc="Explore plywood and board materials" data-img="assets/images/plywood_category.jpg" data-alt="Plywood & Board Materials at The Hub Chungam Traders">
+                PLYWOOD
+              </button>
+              <button type="button" class="material-tab" role="tab" id="tab-kitchen" aria-selected="false" aria-controls="hero-visual-panel" data-material="kitchen" data-title="Kitchen Door Finishes" data-desc="Explore kitchen door and cabinetry finishes" data-img="assets/images/kitchen_doors_category.jpg" data-alt="Kitchen Door & Cabinetry Finishes at The Hub Chungam Traders">
+                KITCHEN DOORS
+              </button>
+              <button type="button" class="material-tab" role="tab" id="tab-flooring" aria-selected="false" aria-controls="hero-visual-panel" data-material="flooring" data-title="Engineered & Laminate Flooring" data-desc="Explore engineered and laminate flooring options" data-img="assets/images/flooring_category.jpg" data-alt="Engineered & Laminate Flooring at The Hub Chungam Traders">
+                FLOORING
+              </button>
+              <button type="button" class="material-tab" role="tab" id="tab-panels" aria-selected="false" aria-controls="hero-visual-panel" data-material="panels" data-title="Architectural Hardware & Panels" data-desc="Explore architectural hardware and interior decorative panels" data-img="assets/images/hardware_category.jpg" data-alt="Architectural Hardware & Interior Decorative Panels at The Hub Chungam Traders">
+                PANELS
+              </button>
+            </div>
           </div>
-        </div>
 
-        <!-- Hero Visual Column -->
-        <div class="hero-visual">
-          <div class="hero-image-frame">
-            <img 
-              src="assets/images/hero_showroom.jpg" 
-              alt="THE HUB CHUNGAM TRADERS Premium Interior Material Showroom" 
-              width="800" 
-              height="600" 
-              loading="eager">
+          <!-- Hero Visual Column -->
+          <div class="hero-visual" id="hero-visual-panel" role="tabpanel" aria-labelledby="tab-plywood">
+            <div class="hero-image-bleed-wrapper">
+              <div class="hero-image-frame">
+                <img 
+                  id="heroMaterialImage"
+                  src="assets/images/plywood_category.jpg" 
+                  alt="Plywood & Board Materials at The Hub Chungam Traders" 
+                  width="800" 
+                  height="550" 
+                  loading="eager">
+              </div>
+
+              <!-- Floating Material Info Card -->
+              <div class="hero-floating-card" id="heroFloatingCard">
+                <span class="floating-card-eyebrow">FEATURED MATERIAL</span>
+                <h3 class="floating-card-title" id="cardMaterialTitle">Plywood & Board Materials</h3>
+                <p class="floating-card-desc" id="cardMaterialDesc">Explore plywood and board materials</p>
+                <a href="#products" class="floating-card-action">
+                  <span>EXPLORE</span>
+                  <svg class="floating-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
 
