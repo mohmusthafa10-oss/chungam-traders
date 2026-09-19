@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>THE HUB CHUNGAM TRADERS | Plywood, Kitchen Doors & Flooring in Pappinisseri, Kannur</title>
+  <title>Plywood, Hardware & Building Materials in Pappinisseri | The Hub Chungam Traders</title>
   
-  <meta name="description" content="THE HUB CHUNGAM TRADERS in Pappinisseri, Kannur, Kerala. Premium showroom for high-grade Plywood, Kitchen Doors, Flooring, and related interior building materials. Contact: 8088729972.">
-  <meta name="keywords" content="The Hub Chungam Traders, Plywood Kannur, Kitchen Doors Pappinisseri, Flooring Kannur, Interior Materials Pappinisseri, Kerala">
-  <link rel="canonical" href="https://chungamtraders.com/">
+  <meta name="description" content="The Hub Chungam Traders in Pappinisseri, Kannur. Premier showroom for Plywood, Classic Plywood, Door Locks, Architectural Hardware, Panels, Flooring, Kitchen Hardware, Paints & Adhesives.">
+  <meta name="keywords" content="Plywood Pappinisseri, Hardware Shop Pappinisseri, Building Materials Kannur, Classic Plywood, Door Locks Kannur, Flooring Pappinisseri">
+  <link rel="canonical" href="https://chungamtraders.com/index.html">
 
   <!-- OpenGraph Metadata -->
-  <meta property="og:title" content="THE HUB CHUNGAM TRADERS | Plywood, Kitchen Doors & Flooring">
-  <meta property="og:description" content="Premium interior material showroom in Pappinisseri, Kannur, Kerala featuring Plywood, Kitchen Doors, and Flooring.">
+  <meta property="og:title" content="Plywood, Hardware & Building Materials in Pappinisseri | The Hub Chungam Traders">
+  <meta property="og:description" content="Showroom for Plywood, Architectural Hardware, Door Locks, Panels, Flooring & Kitchen Hardware in Pappinisseri, Kannur.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://chungamtraders.com/">
-  <meta property="og:image" content="https://chungamtraders.com/assets/images/hero_showroom.jpg">
+  <meta property="og:url" content="https://chungamtraders.com/index.html">
+  <meta property="og:image" content="https://chungamtraders.com/assets/images/plywood-hero.webp">
 
-  <!-- Style & Font imports -->
+  <!-- Preload critical hero image -->
+  <link rel="preload" as="image" href="assets/images/plywood-hero.webp" fetchpriority="high">
+
+  <!-- Style import -->
   <link rel="stylesheet" href="styles.css">
 
   <!-- LocalBusiness Schema (JSON-LD) using strictly verified data -->
@@ -35,7 +38,7 @@
       "postalCode": "670561",
       "addressCountry": "IN"
     },
-    "description": "Showroom for Plywood, Kitchen Doors, Flooring and related interior building materials in Pappinisseri, Kannur, Kerala."
+    "description": "Local showroom for Plywood, Architectural Hardware, Door Locks, Panels, Flooring, Kitchen Hardware, Paints and Adhesives in Pappinisseri, Kannur, Kerala."
   }
   </script>
 </head>
@@ -45,15 +48,15 @@
   <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
 
   <!-- ==================================================================== -->
-  <!-- SECTION 1: HEADER & NAVIGATION                                       -->
+  <!-- HEADER & NAVIGATION                                                  -->
   <!-- ==================================================================== -->
   <header class="site-header" id="header">
     <div class="header-container">
       
-      <!-- Logo: Actual Brand SVG Asset with Fallback Accessibility -->
-      <a href="#home" class="brand-logo" aria-label="THE HUB CHUNGAM TRADERS Home">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo" aria-label="THE HUB CHUNGAM TRADERS Home">
         <img 
-          src="assets/images/chungam-traders-logo.svg" 
+          src="assets/images/Chungam_Traders_Gold_Glossy_Logo.webp" 
           alt="THE HUB CHUNGAM TRADERS" 
           class="brand-logo-img" 
           width="200" 
@@ -64,20 +67,57 @@
       <div class="desktop-nav-wrapper">
         <nav aria-label="Desktop Navigation">
           <ul class="desktop-nav-list">
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="#products" class="nav-link">Products</a></li>
-            <li><a href="#collections" class="nav-link">Collections</a></li>
-            <li><a href="#panels" class="nav-link">Panels</a></li>
-            <li><a href="#about" class="nav-link">About</a></li>
-            <li><a href="#location" class="nav-link">Location</a></li>
-            <li><a href="#enquiry" class="nav-link">Enquire</a></li>
+            <!-- Materials Category Dropdown -->
+            <li class="desktop-dropdown-container">
+              <a href="#categories" class="nav-link nav-link-dropdown" aria-haspopup="true" aria-expanded="false">
+                <span>Materials</span>
+                <svg class="dropdown-caret-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+              <div class="desktop-dropdown-menu" role="menu" aria-label="Materials Categories">
+                <a href="products/plywood-pappinisseri.html" class="dropdown-category-item" role="menuitem">
+                  <span class="dropdown-category-title">Plywood</span>
+                  <span class="dropdown-category-desc">Boards for furniture, interiors &amp; construction</span>
+                </a>
+                <a href="products/door-locks-architectural-hardware.html" class="dropdown-category-item" role="menuitem">
+                  <span class="dropdown-category-title">Door Locks &amp; Architectural Hardware</span>
+                  <span class="dropdown-category-desc">Locks, handles, hinges &amp; architectural fittings</span>
+                </a>
+                <a href="products/panels-pappinisseri.html" class="dropdown-category-item" role="menuitem">
+                  <span class="dropdown-category-title">Panels</span>
+                  <span class="dropdown-category-desc">Decorative panels for feature walls &amp; interiors</span>
+                </a>
+                <a href="products/flooring-pappinisseri.html" class="dropdown-category-item" role="menuitem">
+                  <span class="dropdown-category-title">Flooring</span>
+                  <span class="dropdown-category-desc">Wood &amp; laminate flooring solutions</span>
+                </a>
+                <a href="products/wall-decorative-materials.html" class="dropdown-category-item" role="menuitem">
+                  <span class="dropdown-category-title">Wall &amp; Decorative Materials</span>
+                  <span class="dropdown-category-desc">Materials for feature walls &amp; decorative interiors</span>
+                </a>
+                <a href="products/kitchen-hardware-pappinisseri.html" class="dropdown-category-item" role="menuitem">
+                  <span class="dropdown-category-title">Kitchen Hardware</span>
+                  <span class="dropdown-category-desc">Functional fittings for kitchens &amp; cabinets</span>
+                </a>
+                <a href="products/paints-adhesives-building-materials.html" class="dropdown-category-item" role="menuitem">
+                  <span class="dropdown-category-title">Paints &amp; Adhesives</span>
+                  <span class="dropdown-category-desc">Finishing, bonding &amp; building materials</span>
+                </a>
+              </div>
+            </li>
+
+            <li><a href="classic-plywood-pappinisseri.html" class="nav-link">Classic Plywood</a></li>
+            <li><a href="#about" class="nav-link">About Us</a></li>
+            <li><a href="#about" class="nav-link">Why The Hub</a></li>
+            <li><a href="#location" class="nav-link">Visit Store</a></li>
           </ul>
         </nav>
 
-        <a href="#enquiry" class="btn-cta">CONTACT US</a>
+        <a href="https://wa.me/918088729972?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20building%20materials%20available%20at%20The%20Hub%20Chungam%20Traders." target="_blank" rel="noopener noreferrer" class="btn-cta">WhatsApp Enquiry</a>
       </div>
 
-      <!-- Mobile Menu Toggle Button (44px x 44px touch target) -->
+      <!-- Mobile Menu Toggle Button -->
       <button 
         type="button" 
         class="mobile-menu-toggle" 
@@ -96,18 +136,56 @@
   <div class="mobile-nav-panel" id="mobileNavPanel" role="region" aria-label="Mobile Navigation">
     <nav aria-label="Mobile Menu Links">
       <ul class="mobile-nav-list">
-        <li class="mobile-nav-item"><a href="#home" class="mobile-nav-link">Home</a></li>
-        <li class="mobile-nav-item"><a href="#products" class="mobile-nav-link">Products</a></li>
-        <li class="mobile-nav-item"><a href="#collections" class="mobile-nav-link">Collections</a></li>
-        <li class="mobile-nav-item"><a href="#panels" class="mobile-nav-link">Panels</a></li>
-        <li class="mobile-nav-item"><a href="#about" class="mobile-nav-link">About</a></li>
-        <li class="mobile-nav-item"><a href="#location" class="mobile-nav-link">Location</a></li>
-        <li class="mobile-nav-item"><a href="#enquiry" class="mobile-nav-link">Enquire</a></li>
+        <!-- Mobile Accordion Item for Materials -->
+        <li class="mobile-accordion-item" id="mobileMaterialsAccordion">
+          <button type="button" class="mobile-accordion-btn" id="mobileMaterialsAccordionBtn" aria-expanded="false">
+            <span>Materials</span>
+            <svg class="mobile-accordion-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-panel" aria-label="Materials Subcategories">
+            <a href="products/plywood-pappinisseri.html" class="mobile-sub-link">
+              <span class="mobile-sub-title">Plywood</span>
+              <span class="mobile-sub-desc">Boards for furniture, interiors &amp; construction</span>
+            </a>
+            <a href="products/door-locks-architectural-hardware.html" class="mobile-sub-link">
+              <span class="mobile-sub-title">Door Locks &amp; Architectural Hardware</span>
+              <span class="mobile-sub-desc">Locks, handles, hinges &amp; fittings</span>
+            </a>
+            <a href="products/panels-pappinisseri.html" class="mobile-sub-link">
+              <span class="mobile-sub-title">Panels</span>
+              <span class="mobile-sub-desc">Decorative &amp; interior wall panels</span>
+            </a>
+            <a href="products/flooring-pappinisseri.html" class="mobile-sub-link">
+              <span class="mobile-sub-title">Flooring</span>
+              <span class="mobile-sub-desc">Wood &amp; laminate flooring solutions</span>
+            </a>
+            <a href="products/wall-decorative-materials.html" class="mobile-sub-link">
+              <span class="mobile-sub-title">Wall &amp; Decorative</span>
+              <span class="mobile-sub-desc">Materials for feature walls &amp; interiors</span>
+            </a>
+            <a href="products/kitchen-hardware-pappinisseri.html" class="mobile-sub-link">
+              <span class="mobile-sub-title">Kitchen Hardware</span>
+              <span class="mobile-sub-desc">Functional fittings for kitchens &amp; cabinets</span>
+            </a>
+            <a href="products/paints-adhesives-building-materials.html" class="mobile-sub-link">
+              <span class="mobile-sub-title">Paints &amp; Adhesives</span>
+              <span class="mobile-sub-desc">Finishing, bonding &amp; building materials</span>
+            </a>
+          </div>
+        </li>
+
+        <li class="mobile-nav-item"><a href="classic-plywood-pappinisseri.html" class="mobile-nav-link">Classic Plywood</a></li>
+        <li class="mobile-nav-item"><a href="#about" class="mobile-nav-link">About Us</a></li>
+        <li class="mobile-nav-item"><a href="#about" class="mobile-nav-link">Why The Hub</a></li>
+        <li class="mobile-nav-item"><a href="#location" class="mobile-nav-link">Visit Store</a></li>
       </ul>
     </nav>
 
     <div class="mobile-nav-actions">
-      <a href="tel:8088729972" class="btn-mobile-action btn-mobile-call">Call</a>
+      <a href="https://wa.me/918088729972?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20building%20materials%20available%20at%20The%20Hub%20Chungam%20Traders." target="_blank" rel="noopener noreferrer" class="btn-mobile-action btn-mobile-call">WhatsApp Enquiry</a>
+      <a href="tel:8088729972" class="btn-mobile-action btn-mobile-directions">Call Showroom</a>
       <a href="https://www.google.com/maps/search/?api=1&query=15%2F600-A%2C+CHUNGAM+COMPLEX%2C+NEAR+POST+OFFICE%2C+CHUNGAM+PAPPINISSERI%2C+KANNUR+-+670+561" target="_blank" rel="noopener noreferrer" class="btn-mobile-action btn-mobile-directions">Get Directions</a>
     </div>
   </div>
@@ -118,7 +196,7 @@
   <main id="main-content">
 
     <!-- ================================================================== -->
-    <!-- SECTION 2: HERO SECTION                                            -->
+    <!-- SECTION 01 — HERO                                                  -->
     <!-- ================================================================== -->
     <section class="hero-section" id="home" aria-label="Hero Section">
       <div class="hero-wrapper">
@@ -131,25 +209,25 @@
             <div class="hero-h1-wrapper">
               <span class="h1-accent-line" aria-hidden="true"></span>
               <h1 class="hero-h1">
-                Materials for<br>
-                Better Spaces.
+                Plywood, Hardware &amp;<br>Building Materials in Pappinisseri
               </h1>
             </div>
 
             <p class="hero-paragraph">
-              Plywood, kitchen doors, flooring and interior panels — for builders, designers and homeowners in Pappinisseri, Kannur.
+              From plywood and architectural hardware to flooring, panels, kitchen fittings and finishing materials, The Hub Chungam Traders supplies materials for homes, interiors, furniture and construction.
             </p>
 
             <div class="hero-buttons">
-              <a href="#products" class="btn-primary-action">EXPLORE MATERIALS</a>
-              <a href="#enquiry" class="btn-secondary-action">CONTACT US</a>
+              <a href="https://wa.me/918088729972?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20materials%20available%20at%20The%20Hub%20Chungam%20Traders." target="_blank" rel="noopener noreferrer" class="btn-primary-action">WhatsApp Enquiry</a>
+              <a href="#location" class="btn-secondary-action">Get Directions</a>
+              <a href="tel:8088729972" class="btn-secondary-action">Call Now</a>
             </div>
 
             <!-- Material Credibility Line -->
             <div class="hero-credibility" aria-label="Core material offerings">
               <span class="cred-item">PLYWOOD</span>
               <span class="cred-bullet" aria-hidden="true">•</span>
-              <span class="cred-item">KITCHEN DOORS</span>
+              <span class="cred-item">HARDWARE</span>
               <span class="cred-bullet" aria-hidden="true">•</span>
               <span class="cred-item">FLOORING</span>
               <span class="cred-bullet" aria-hidden="true">•</span>
@@ -158,16 +236,16 @@
 
             <!-- Interactive Material Selector -->
             <div class="hero-material-selector" role="tablist" aria-label="Showroom Material Selector">
-              <button type="button" class="material-tab active" role="tab" id="tab-plywood" aria-selected="true" aria-controls="hero-visual-panel" data-material="plywood" data-title="Plywood & Board Materials" data-desc="Explore plywood and board materials" data-img="assets/images/plywood_category.jpg" data-alt="Plywood & Board Materials at The Hub Chungam Traders">
+              <button type="button" class="material-tab active" role="tab" id="tab-plywood" aria-selected="true" aria-controls="hero-visual-panel" data-material="plywood" data-title="Plywood & Board Materials" data-desc="Explore plywood and board materials" data-img="assets/images/plywood-category.webp" data-alt="Plywood & Board Materials at The Hub Chungam Traders">
                 PLYWOOD
               </button>
-              <button type="button" class="material-tab" role="tab" id="tab-kitchen" aria-selected="false" aria-controls="hero-visual-panel" data-material="kitchen" data-title="Kitchen Door Finishes" data-desc="Explore kitchen door and cabinetry finishes" data-img="assets/images/kitchen_doors_category.jpg" data-alt="Kitchen Door & Cabinetry Finishes at The Hub Chungam Traders">
-                KITCHEN DOORS
+              <button type="button" class="material-tab" role="tab" id="tab-hardware" aria-selected="false" aria-controls="hero-visual-panel" data-material="hardware" data-title="Door Locks & Hardware" data-desc="Explore digital locks, mortise handles and fittings" data-img="assets/images/quba-mortise-door-handles.webp" data-alt="Architectural Hardware at The Hub Chungam Traders">
+                HARDWARE
               </button>
-              <button type="button" class="material-tab" role="tab" id="tab-flooring" aria-selected="false" aria-controls="hero-visual-panel" data-material="flooring" data-title="Engineered & Laminate Flooring" data-desc="Explore engineered and laminate flooring options" data-img="assets/images/flooring_category.jpg" data-alt="Engineered & Laminate Flooring at The Hub Chungam Traders">
+              <button type="button" class="material-tab" role="tab" id="tab-flooring" aria-selected="false" aria-controls="hero-visual-panel" data-material="flooring" data-title="Engineered & Laminate Flooring" data-desc="Explore engineered wood and laminate flooring" data-img="assets/images/flooring-category.webp" data-alt="Flooring Solutions at The Hub Chungam Traders">
                 FLOORING
               </button>
-              <button type="button" class="material-tab" role="tab" id="tab-panels" aria-selected="false" aria-controls="hero-visual-panel" data-material="panels" data-title="Architectural Hardware & Panels" data-desc="Explore architectural hardware and interior decorative panels" data-img="assets/images/quba_mortise_handles_collection.png" data-alt="Architectural Hardware & Interior Decorative Panels at The Hub Chungam Traders">
+              <button type="button" class="material-tab" role="tab" id="tab-panels" aria-selected="false" aria-controls="hero-visual-panel" data-material="panels" data-title="Decorative MDF Panels" data-desc="Explore 8x4ft brick-look decorative panels" data-img="assets/images/brick-mdf-panel-category.webp" data-alt="Decorative Panels at The Hub Chungam Traders">
                 PANELS
               </button>
             </div>
@@ -179,7 +257,7 @@
               <div class="hero-image-frame">
                 <img 
                   id="heroMaterialImage"
-                  src="assets/images/plywood_category.jpg" 
+                  src="assets/images/plywood-category.webp" 
                   alt="Plywood & Board Materials at The Hub Chungam Traders" 
                   width="800" 
                   height="550" 
@@ -189,10 +267,10 @@
               <!-- Floating Material Info Card -->
               <div class="hero-floating-card" id="heroFloatingCard">
                 <span class="floating-card-eyebrow">FEATURED MATERIAL</span>
-                <h3 class="floating-card-title" id="cardMaterialTitle">Plywood & Board Materials</h3>
+                <h3 class="floating-card-title" id="cardMaterialTitle">Plywood &amp; Board Materials</h3>
                 <p class="floating-card-desc" id="cardMaterialDesc">Explore plywood and board materials</p>
-                <a href="#products" class="floating-card-action">
-                  <span>EXPLORE</span>
+                <a href="products/plywood-pappinisseri.html" class="floating-card-action">
+                  <span>EXPLORE CATEGORY</span>
                   <svg class="floating-card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
                     <polyline points="12 5 19 12 12 19"></polyline>
@@ -207,15 +285,39 @@
     </section>
 
     <!-- ================================================================== -->
-    <!-- SECTION 3: PRODUCT CATEGORIES                                      -->
+    <!-- ARCHITECTURAL MARQUEE BANNER                                       -->
     <!-- ================================================================== -->
-    <section class="categories-section" id="products" aria-label="Product Categories">
+    <div class="marquee-banner" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-content">
+          <span class="marquee-item">PLYWOOD <span class="marquee-bullet">•</span></span>
+          <span class="marquee-item">DOOR LOCKS &amp; HARDWARE <span class="marquee-bullet">•</span></span>
+          <span class="marquee-item">DECORATIVE PANELS <span class="marquee-bullet">•</span></span>
+          <span class="marquee-item">WOOD FLOORING <span class="marquee-bullet">•</span></span>
+          <span class="marquee-item">KITCHEN HARDWARE <span class="marquee-bullet">•</span></span>
+          <span class="marquee-item">PAINTS &amp; ADHESIVES <span class="marquee-bullet">•</span></span>
+        </div>
+        <div class="marquee-content">
+          <span class="marquee-item">PLYWOOD <span class="marquee-bullet">•</span></span>
+          <span class="marquee-item">DOOR LOCKS &amp; HARDWARE <span class="marquee-bullet">•</span></span>
+          <span class="marquee-item">DECORATIVE PANELS <span class="marquee-bullet">•</span></span>
+          <span class="marquee-item">WOOD FLOORING <span class="marquee-bullet">•</span></span>
+          <span class="marquee-item">KITCHEN HARDWARE <span class="marquee-bullet">•</span></span>
+          <span class="marquee-item">PAINTS &amp; ADHESIVES <span class="marquee-bullet">•</span></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================================================================== -->
+    <!-- SECTION 02 — WHAT CAN YOU FIND HERE?                               -->
+    <!-- ================================================================== -->
+    <section class="categories-section" id="categories" aria-label="Material Categories Ecosystem">
       <div class="categories-container">
         
         <div class="categories-header">
-          <h2 class="categories-h2">Explore Our Materials</h2>
+          <h2 class="categories-h2">Everything You Need for Interior &amp; Building Work</h2>
           <p class="categories-supporting-text">
-            Selected interior and architectural material categories available at our Pappinisseri showroom.
+            Browse our main material categories — from plywood and door hardware to flooring, panels, kitchen fittings, paints and adhesives.
           </p>
         </div>
 
@@ -225,8 +327,8 @@
           <article class="category-card">
             <div class="category-image-wrapper">
               <img 
-                src="assets/images/plywood_category.jpg" 
-                alt="Stacked Plywood Sheets Detail" 
+                src="assets/images/plywood-category.webp" 
+                alt="Plywood Boards for Furniture and Interiors" 
                 width="600" 
                 height="450" 
                 loading="lazy">
@@ -234,49 +336,74 @@
             <div class="category-card-body">
               <h3 class="category-card-title">Plywood</h3>
               <p class="category-card-desc">
-                Plywood and board materials for interior and building applications.
+                Boards for furniture, interiors, kitchens &amp; construction
               </p>
-              <div class="category-card-footer">
-                <span>View Category</span>
+              <a href="products/plywood-pappinisseri.html" class="category-card-footer">
+                <span>Explore Plywood</span>
                 <svg class="category-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </div>
+              </a>
             </div>
           </article>
 
-          <!-- Category 2: Kitchen Doors -->
+          <!-- Category 2: Door Locks & Architectural Hardware -->
           <article class="category-card">
             <div class="category-image-wrapper">
               <img 
-                src="assets/images/kitchen_doors_category.jpg" 
-                alt="Kitchen Door Finishes and Shutters Display" 
+                src="assets/images/quba-mortise-door-handles.webp" 
+                alt="Door Locks and Architectural Fittings" 
                 width="600" 
                 height="450" 
                 loading="lazy">
             </div>
             <div class="category-card-body">
-              <h3 class="category-card-title">Kitchen Doors</h3>
+              <h3 class="category-card-title">Door Locks &amp; Architectural Hardware</h3>
               <p class="category-card-desc">
-                Kitchen door materials and finishes for modern interiors.
+                Locks, handles, hinges &amp; architectural fittings
               </p>
-              <div class="category-card-footer">
-                <span>View Category</span>
+              <a href="products/door-locks-architectural-hardware.html" class="category-card-footer">
+                <span>Explore Door Locks &amp; Hardware</span>
                 <svg class="category-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </div>
+              </a>
             </div>
           </article>
 
-          <!-- Category 3: Flooring -->
+          <!-- Category 3: Panels -->
           <article class="category-card">
             <div class="category-image-wrapper">
               <img 
-                src="assets/images/flooring_category.jpg" 
-                alt="Engineered Wood and Laminate Flooring Planks" 
+                src="assets/images/brick-mdf-panel-category.webp" 
+                alt="Decorative MDF Wall Panels" 
+                width="600" 
+                height="450" 
+                loading="lazy">
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Panels</h3>
+              <p class="category-card-desc">
+                Decorative panels for feature walls &amp; interiors
+              </p>
+              <a href="products/panels-pappinisseri.html" class="category-card-footer">
+                <span>Explore Panels</span>
+                <svg class="category-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Category 4: Flooring -->
+          <article class="category-card">
+            <div class="category-image-wrapper">
+              <img 
+                src="assets/images/flooring-category.webp" 
+                alt="Wood and Laminate Flooring Solutions" 
                 width="600" 
                 height="450" 
                 loading="lazy">
@@ -284,35 +411,85 @@
             <div class="category-card-body">
               <h3 class="category-card-title">Flooring</h3>
               <p class="category-card-desc">
-                Engineered wood and laminate flooring collections.
+                Wood &amp; laminate flooring solutions for interior spaces
               </p>
-              <div class="category-card-footer">
-                <span>View Category</span>
+              <a href="products/flooring-pappinisseri.html" class="category-card-footer">
+                <span>Explore Flooring</span>
                 <svg class="category-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
-              </div>
+              </a>
             </div>
           </article>
 
-          <!-- Category 4: Hardware -->
+          <!-- Category 5: Wall & Decorative Materials -->
           <article class="category-card">
             <div class="category-image-wrapper">
               <img 
-                src="assets/images/quba_mortise_handles_collection.png" 
-                alt="Quba Designer Mortise Door Handles and Architectural Fittings" 
+                src="assets/images/wall-decorative-category.webp" 
+                alt="Wall and Decorative Surface Finishes" 
                 width="600" 
                 height="450" 
                 loading="lazy">
             </div>
             <div class="category-card-body">
-              <h3 class="category-card-title">Hardware</h3>
+              <h3 class="category-card-title">Wall &amp; Decorative Materials</h3>
               <p class="category-card-desc">
-                Quba digital locks, rim security locks and designer mortise door handles.
+                Materials for feature walls and decorative interiors
               </p>
-              <a href="#hardware" class="category-card-footer">
-                <span>View Collection</span>
+              <a href="products/wall-decorative-materials.html" class="category-card-footer">
+                <span>Explore Wall &amp; Decorative</span>
+                <svg class="category-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Category 6: Kitchen Hardware -->
+          <article class="category-card">
+            <div class="category-image-wrapper">
+              <img 
+                src="assets/images/hettich-hinges-drawer-system.webp" 
+                alt="Functional Kitchen Fittings and Drawer Hardware" 
+                width="600" 
+                height="450" 
+                loading="lazy">
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Kitchen Hardware</h3>
+              <p class="category-card-desc">
+                Functional fittings for kitchens, cabinets &amp; furniture
+              </p>
+              <a href="products/kitchen-hardware-pappinisseri.html" class="category-card-footer">
+                <span>Explore Kitchen Hardware</span>
+                <svg class="category-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Category 7: Paints & Adhesives -->
+          <article class="category-card">
+            <div class="category-image-wrapper">
+              <img 
+                src="assets/images/paints-adhesives-category.webp" 
+                alt="Paints, Adhesives and Building Materials" 
+                width="600" 
+                height="450" 
+                loading="lazy">
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Paints &amp; Adhesives</h3>
+              <p class="category-card-desc">
+                Finishing, bonding &amp; related building materials
+              </p>
+              <a href="products/paints-adhesives-building-materials.html" class="category-card-footer">
+                <span>Explore Paints &amp; Adhesives</span>
                 <svg class="category-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
@@ -327,428 +504,110 @@
     </section>
 
     <!-- ================================================================== -->
-    <!-- SECTION 4: FEATURED COLLECTIONS                                    -->
+    <!-- SECTION 03 — PLYWOOD DISCOVERY                                     -->
     <!-- ================================================================== -->
-    <section class="featured-section" id="collections" aria-label="Featured Collections">
-      <div class="featured-container">
-        
-        <div class="featured-header">
-          <span class="featured-collection-badge">Catalogue Showcase</span>
-          <h2 class="featured-h2">Featured Flooring Collection — Classic Series</h2>
-          
-          <!-- Catalogue Verified Specifications Bar -->
-          <div class="collection-specs-bar">
-            <div class="spec-item">
-              <span class="spec-dot"></span>
-              <span>AC-4 Grade Wax Coated Lock</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-dot"></span>
-              <span>German Locking System</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-dot"></span>
-              <span>10 Year Residential Warranty</span>
-            </div>
-            <div class="spec-item">
-              <span class="spec-dot"></span>
-              <span>5 Year Commercial Warranty</span>
+    <section class="section-padding" id="plywood-discovery" aria-label="Plywood Discovery">
+      <div class="container" style="max-width: var(--container-max-width); margin-inline: auto; padding-inline: var(--padding-x-mobile);">
+        <div class="categories-header" style="max-width: 800px; margin-bottom: 32px;">
+          <span class="hero-eyebrow" style="color: var(--color-champagne-gold);">MATERIAL FOCUS</span>
+          <h2 class="categories-h2" style="font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--color-primary-text); margin-top: 8px;">Plywood for Furniture, Interiors, Kitchens &amp; Construction</h2>
+          <p class="categories-supporting-text" style="font-size: 16px; color: var(--color-muted-text); margin-top: 12px; line-height: 1.6;">
+            Explore plywood options for everyday interior, furniture, kitchen, wardrobe, door and construction requirements.
+          </p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center;" class="plywood-split-grid">
+          <div style="border-radius: var(--radius-card); overflow: hidden; border: 1px solid var(--color-border); position: relative;">
+            <img src="assets/images/plywood-category.webp" alt="Plywood Stacked Sheets at The Hub" style="width: 100%; height: auto; display: block; aspect-ratio: 16/9; object-fit: cover;">
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 20px;">
+            <h3 style="font-size: 24px; font-weight: 600; color: var(--color-primary-text);">Quality Plywood Boards for Every Project</h3>
+            <p style="font-size: 15px; color: var(--color-muted-text); line-height: 1.6;">
+              Whether you need boards for kitchen cabinetry, wardrobe frameworks, doors, or heavy construction, our Pappinisseri showroom supplies plywood selected for durability and precision.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 16px; margin-top: 8px;">
+              <a href="products/plywood-pappinisseri.html" class="btn-primary-action">Explore Plywood Category</a>
+              <a href="classic-plywood-pappinisseri.html" class="btn-secondary-action">Discover Classic Plywood</a>
             </div>
           </div>
         </div>
-
-        <!-- Product Cards Grid (3 Columns Desktop) -->
-        <div class="products-grid">
-          
-          <!-- Card 1: CL-1010 American Teak -->
-          <article class="product-card">
-            <div class="product-image-frame">
-              <img 
-                src="assets/images/classic_series_teak.jpg" 
-                alt="Classic Series CL-1010 American Teak Flooring" 
-                width="600" 
-                height="450" 
-                loading="lazy">
-            </div>
-            <div class="product-card-body">
-              <span class="product-code-label">CL-1010</span>
-              <h3 class="product-title">American Teak</h3>
-              <ul class="product-spec-list">
-                <li>• AC-4 Grade Wax Coated Lock</li>
-                <li>• German Locking System</li>
-                <li>• 10 Yr Residential / 5 Yr Commercial Warranty</li>
-              </ul>
-              <button 
-                type="button" 
-                class="btn-enquire" 
-                data-product-code="CL-1010" 
-                data-product-title="American Teak">
-                ENQUIRE
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 2: CL-1012 Wenge -->
-          <article class="product-card">
-            <div class="product-swatch-frame" style="background: linear-gradient(135deg, #2A1F1B 0%, #17110E 100%);">
-              <span class="swatch-code-tag">CL-1012</span>
-              <span class="swatch-texture-label">Wenge Surface Finish</span>
-            </div>
-            <div class="product-card-body">
-              <span class="product-code-label">CL-1012</span>
-              <h3 class="product-title">Wenge</h3>
-              <ul class="product-spec-list">
-                <li>• AC-4 Grade Wax Coated Lock</li>
-                <li>• German Locking System</li>
-                <li>• 10 Yr Residential / 5 Yr Commercial Warranty</li>
-              </ul>
-              <button 
-                type="button" 
-                class="btn-enquire" 
-                data-product-code="CL-1012" 
-                data-product-title="Wenge">
-                ENQUIRE
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 3: CL-1013 Turkish Walnut -->
-          <article class="product-card">
-            <div class="product-swatch-frame" style="background: linear-gradient(135deg, #4A3528 0%, #2E1F16 100%);">
-              <span class="swatch-code-tag">CL-1013</span>
-              <span class="swatch-texture-label">Turkish Walnut Grain</span>
-            </div>
-            <div class="product-card-body">
-              <span class="product-code-label">CL-1013</span>
-              <h3 class="product-title">Turkish Walnut</h3>
-              <ul class="product-spec-list">
-                <li>• AC-4 Grade Wax Coated Lock</li>
-                <li>• German Locking System</li>
-                <li>• 10 Yr Residential / 5 Yr Commercial Warranty</li>
-              </ul>
-              <button 
-                type="button" 
-                class="btn-enquire" 
-                data-product-code="CL-1013" 
-                data-product-title="Turkish Walnut">
-                ENQUIRE
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 4: CL-1014 Merbau -->
-          <article class="product-card">
-            <div class="product-swatch-frame" style="background: linear-gradient(135deg, #5C2B1D 0%, #3B1B12 100%);">
-              <span class="swatch-code-tag">CL-1014</span>
-              <span class="swatch-texture-label">Merbau Warm Tone</span>
-            </div>
-            <div class="product-card-body">
-              <span class="product-code-label">CL-1014</span>
-              <h3 class="product-title">Merbau</h3>
-              <ul class="product-spec-list">
-                <li>• AC-4 Grade Wax Coated Lock</li>
-                <li>• German Locking System</li>
-                <li>• 10 Yr Residential / 5 Yr Commercial Warranty</li>
-              </ul>
-              <button 
-                type="button" 
-                class="btn-enquire" 
-                data-product-code="CL-1014" 
-                data-product-title="Merbau">
-                ENQUIRE
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 5: CL-1015 Classic Oak -->
-          <article class="product-card">
-            <div class="product-image-frame">
-              <img 
-                src="assets/images/flooring_category.jpg" 
-                alt="Classic Series CL-1015 Classic Oak Flooring" 
-                width="600" 
-                height="450" 
-                loading="lazy">
-            </div>
-            <div class="product-card-body">
-              <span class="product-code-label">CL-1015</span>
-              <h3 class="product-title">Classic Oak</h3>
-              <ul class="product-spec-list">
-                <li>• AC-4 Grade Wax Coated Lock</li>
-                <li>• German Locking System</li>
-                <li>• 10 Yr Residential / 5 Yr Commercial Warranty</li>
-              </ul>
-              <button 
-                type="button" 
-                class="btn-enquire" 
-                data-product-code="CL-1015" 
-                data-product-title="Classic Oak">
-                ENQUIRE
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 6: CL-1016 Steel Grey -->
-          <article class="product-card">
-            <div class="product-swatch-frame" style="background: linear-gradient(135deg, #4E5357 0%, #2E3337 100%);">
-              <span class="swatch-code-tag">CL-1016</span>
-              <span class="swatch-texture-label">Steel Grey Surface</span>
-            </div>
-            <div class="product-card-body">
-              <span class="product-code-label">CL-1016</span>
-              <h3 class="product-title">Steel Grey</h3>
-              <ul class="product-spec-list">
-                <li>• AC-4 Grade Wax Coated Lock</li>
-                <li>• German Locking System</li>
-                <li>• 10 Yr Residential / 5 Yr Commercial Warranty</li>
-              </ul>
-              <button 
-                type="button" 
-                class="btn-enquire" 
-                data-product-code="CL-1016" 
-                data-product-title="Steel Grey">
-                ENQUIRE
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 7: CL-1018 Beige Steak -->
-          <article class="product-card">
-            <div class="product-swatch-frame" style="background: linear-gradient(135deg, #8C7C6D 0%, #5E5043 100%);">
-              <span class="swatch-code-tag">CL-1018</span>
-              <span class="swatch-texture-label">Beige Steak Texture</span>
-            </div>
-            <div class="product-card-body">
-              <span class="product-code-label">CL-1018</span>
-              <h3 class="product-title">Beige Steak</h3>
-              <ul class="product-spec-list">
-                <li>• AC-4 Grade Wax Coated Lock</li>
-                <li>• German Locking System</li>
-                <li>• 10 Yr Residential / 5 Yr Commercial Warranty</li>
-              </ul>
-              <button 
-                type="button" 
-                class="btn-enquire" 
-                data-product-code="CL-1018" 
-                data-product-title="Beige Steak">
-                ENQUIRE
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 8: CL-1019 African Walnut -->
-          <article class="product-card">
-            <div class="product-swatch-frame" style="background: linear-gradient(135deg, #382419 0%, #1F130B 100%);">
-              <span class="swatch-code-tag">CL-1019</span>
-              <span class="swatch-texture-label">African Walnut Grain</span>
-            </div>
-            <div class="product-card-body">
-              <span class="product-code-label">CL-1019</span>
-              <h3 class="product-title">African Walnut</h3>
-              <ul class="product-spec-list">
-                <li>• AC-4 Grade Wax Coated Lock</li>
-                <li>• German Locking System</li>
-                <li>• 10 Yr Residential / 5 Yr Commercial Warranty</li>
-              </ul>
-              <button 
-                type="button" 
-                class="btn-enquire" 
-                data-product-code="CL-1019" 
-                data-product-title="African Walnut">
-                ENQUIRE
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 9: CL-1020 Biscuit Gold -->
-          <article class="product-card">
-            <div class="product-swatch-frame" style="background: linear-gradient(135deg, #A88D56 0%, #705B30 100%);">
-              <span class="swatch-code-tag">CL-1020</span>
-              <span class="swatch-texture-label">Biscuit Gold Texture</span>
-            </div>
-            <div class="product-card-body">
-              <span class="product-code-label">CL-1020</span>
-              <h3 class="product-title">Biscuit Gold</h3>
-              <ul class="product-spec-list">
-                <li>• AC-4 Grade Wax Coated Lock</li>
-                <li>• German Locking System</li>
-                <li>• 10 Yr Residential / 5 Yr Commercial Warranty</li>
-              </ul>
-              <button 
-                type="button" 
-                class="btn-enquire" 
-                data-product-code="CL-1020" 
-                data-product-title="Biscuit Gold">
-                ENQUIRE
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 10: White Laminate -->
-          <article class="product-card">
-            <div class="product-swatch-frame" style="background: linear-gradient(135deg, #E6E4E0 0%, #C4C2BE 100%);">
-              <span class="swatch-code-tag" style="background-color: #111; color: #FFF;">LAMINATE</span>
-              <span class="swatch-texture-label" style="color: #111; text-shadow: none;">White Laminate Finish</span>
-            </div>
-            <div class="product-card-body">
-              <span class="product-code-label">SPECIAL VARIANT</span>
-              <h3 class="product-title">White Laminate</h3>
-              <ul class="product-spec-list">
-                <li>• AC-4 Grade Wax Coated Lock</li>
-                <li>• German Locking System</li>
-                <li>• 10 Yr Residential / 5 Yr Commercial Warranty</li>
-              </ul>
-              <button 
-                type="button" 
-                class="btn-enquire" 
-                data-product-code="VARIANT" 
-                data-product-title="White Laminate">
-                ENQUIRE
-              </button>
-            </div>
-          </article>
-
-          <!-- Card 11: Black Laminate -->
-          <article class="product-card">
-            <div class="product-swatch-frame" style="background: linear-gradient(135deg, #222222 0%, #0D0D0D 100%);">
-              <span class="swatch-code-tag">LAMINATE</span>
-              <span class="swatch-texture-label">Black Laminate Finish</span>
-            </div>
-            <div class="product-card-body">
-              <span class="product-code-label">SPECIAL VARIANT</span>
-              <h3 class="product-title">Black Laminate</h3>
-              <ul class="product-spec-list">
-                <li>• AC-4 Grade Wax Coated Lock</li>
-                <li>• German Locking System</li>
-                <li>• 10 Yr Residential / 5 Yr Commercial Warranty</li>
-              </ul>
-              <button 
-                type="button" 
-                class="btn-enquire" 
-                data-product-code="VARIANT" 
-                data-product-title="Black Laminate">
-                ENQUIRE
-              </button>
-            </div>
-          </article>
-
-        </div>
-
       </div>
     </section>
 
     <!-- ================================================================== -->
-    <!-- SECTION 5: DECORATIVE MDF / BRICK PANEL COLLECTION                 -->
+    <!-- SECTION 04 — CLASSIC PLYWOOD — MAJOR OWN-BRAND SHOWCASE           -->
     <!-- ================================================================== -->
-    <section class="brick-panel-section" id="panels" aria-label="Decorative MDF Panels">
-      <div class="brick-panel-container">
+    <section class="classic-showcase-section" id="classic-showcase" aria-label="Classic Plywood Showcase">
+      <div class="classic-showcase-container">
         
-        <!-- Mobile Image First / Left Column Desktop -->
-        <div class="brick-visual-column">
-          <div class="brick-preview-frame" id="brickPreviewFrame" style="background: linear-gradient(135deg, #4A150E 0%, #210906 100%);">
-            <div class="brick-wall-pattern" id="brickWallPattern" aria-hidden="true"></div>
-            <span class="brick-preview-tag">BRICK MDF PANEL</span>
-            
-            <div class="brick-preview-info">
-              <h4 class="brick-preview-variant-name" id="brickPreviewName">Red Brick</h4>
-              <p class="brick-preview-spec">Size: 8 × 4 ft • Thickness: 6 mm • Decorative MDF</p>
-            </div>
-          </div>
+        <!-- Left: Product Showcase Visual -->
+        <div class="classic-visual-box">
+          <span class="classic-badge-tag">OWN BRAND</span>
+          <img 
+            src="assets/images/classic-plywood-board.webp" 
+            alt="Classic Plywood Brand Board Showcase" 
+            width="800" 
+            height="600" 
+            loading="lazy">
         </div>
 
-        <!-- Mobile Text Second / Right Column Desktop -->
-        <div class="brick-content-column">
-          <span class="brick-eyebrow">WALL PANEL COLLECTION</span>
-          <h2 class="brick-h2">Brick-Look Decorative MDF Panels</h2>
-
-          <!-- Verified Specs Pills -->
-          <div class="brick-specs-pills">
-            <span class="brick-spec-pill">Size: 8 × 4 ft</span>
-            <span class="brick-spec-pill">Thickness: 6 mm</span>
-            <span class="brick-spec-pill">Decorative MDF Base</span>
-          </div>
-
-          <p class="brick-desc">
-            Decorative brick-look MDF wall panels designed for architectural interior feature walls, cladding, and surface accent installations.
+        <!-- Right: Editorial Content -->
+        <div class="classic-content-box">
+          <span class="classic-eyebrow">OUR OWN PLYWOOD BRAND</span>
+          <h2 class="classic-title-h2">Classic Plywood</h2>
+          <h3 class="classic-subtitle-h3">Plywood for Everyday Interior &amp; Building Work</h3>
+          
+          <p class="classic-description">
+            Classic Plywood is our own plywood range for practical interior, furniture, kitchen, wardrobe, door and construction requirements.
           </p>
 
-          <!-- Interactive Swatches Selector -->
-          <div class="variant-selector-wrapper">
-            <span class="variant-selector-label">Select Color Variant:</span>
-            
-            <div class="variant-swatches-grid">
-              
-              <button type="button" class="variant-swatch-btn active" data-variant="Red Brick">
-                <span class="swatch-color-indicator swatch-red-brick"></span>
-                <span>Red Brick</span>
-              </button>
-
-              <button type="button" class="variant-swatch-btn" data-variant="Rustic Brick">
-                <span class="swatch-color-indicator swatch-rustic-brick"></span>
-                <span>Rustic Brick</span>
-              </button>
-
-              <button type="button" class="variant-swatch-btn" data-variant="Rustic Gray">
-                <span class="swatch-color-indicator swatch-rustic-gray"></span>
-                <span>Rustic Gray</span>
-              </button>
-
-              <button type="button" class="variant-swatch-btn" data-variant="White Gray">
-                <span class="swatch-color-indicator swatch-white-gray"></span>
-                <span>White Gray</span>
-              </button>
-
-              <button type="button" class="variant-swatch-btn" data-variant="Full White">
-                <span class="swatch-color-indicator swatch-full-white"></span>
-                <span>Full White</span>
-              </button>
-
-            </div>
+          <div class="classic-applications-grid" aria-label="Classic Plywood Applications">
+            <span class="classic-app-pill">Furniture</span>
+            <span class="classic-app-pill">Kitchens</span>
+            <span class="classic-app-pill">Wardrobes</span>
+            <span class="classic-app-pill">Interior Work</span>
+            <span class="classic-app-pill">Doors</span>
+            <span class="classic-app-pill">Construction</span>
           </div>
 
-          <button 
-            type="button" 
-            class="btn-brick-enquire" 
-            id="brickEnquireBtn" 
-            data-product-title="Brick MDF Panel (Red Brick)">
-            ENQUIRE FOR RED BRICK
-          </button>
-
+          <div class="classic-cta-group">
+            <a href="classic-plywood-pappinisseri.html" class="btn-primary-action">Explore Classic Plywood</a>
+            <a href="https://wa.me/918088729972?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20Classic%20Plywood%20available%20at%20The%20Hub%20Chungam%20Traders." target="_blank" rel="noopener noreferrer" class="btn-secondary-action">WhatsApp Enquiry</a>
+          </div>
         </div>
 
       </div>
     </section>
 
     <!-- ================================================================== -->
-    <!-- SECTION 5B: DOOR LOCKS & ARCHITECTURAL HARDWARE                     -->
+    <!-- SECTION 05 — DOOR LOCKS & ARCHITECTURAL HARDWARE                  -->
     <!-- ================================================================== -->
-    <section class="hardware-section" id="hardware" aria-label="Door Locks & Architectural Hardware">
+    <section class="hardware-section" id="hardware-section" aria-label="Door Locks & Architectural Hardware">
       <div class="hardware-container">
         
-        <!-- Top Hero Split Showcase -->
+        <!-- Top Showcase Header Split -->
         <div class="hardware-hero-split">
           
-          <!-- Content Left -->
           <div class="hardware-hero-content">
             <div class="hardware-eyebrow-wrapper">
-              <span class="hardware-eyebrow">DOOR LOCKS & HARDWARE</span>
+              <span class="hardware-eyebrow">ARCHITECTURAL FITTINGS</span>
               <span class="hardware-gold-dash" aria-hidden="true"></span>
             </div>
 
             <div class="hardware-h2-wrapper">
               <span class="hardware-title-accent" aria-hidden="true"></span>
               <h2 class="hardware-h2">
-                Premium Hardware for<br>
-                Lasting Impressions.
+                Door Locks, Handles, Hinges &amp;<br>Architectural Hardware
               </h2>
             </div>
 
             <p class="hardware-supporting-text">
-              Discover our range of high-quality digital locks, handles, hinges, and architectural hardware designed for security, style, and long-term performance.
+              Explore hardware for doors, interiors, furniture and architectural applications, including locks, handles, hinges, stoppers, latches and related fittings.
             </p>
 
-            <a href="#enquiry" class="btn-hardware-explore">
-              <span>EXPLORE HARDWARE</span>
+            <a href="products/door-locks-architectural-hardware.html" class="btn-hardware-explore">
+              <span>Explore Door Locks &amp; Hardware</span>
               <svg class="hardware-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
@@ -756,22 +615,20 @@
             </a>
           </div>
 
-          <!-- Large Featured Visual Right -->
           <div class="hardware-hero-visual">
             <div class="hardware-main-image-frame">
               <img 
-                src="assets/images/quba_mortise_handles_collection.png" 
+                src="assets/images/quba-mortise-door-handles.webp" 
                 alt="Quba Designer Mortise Door Handles Collection" 
                 width="800" 
                 height="550" 
                 loading="lazy">
               
-              <!-- Floating Info Card -->
               <div class="hardware-floating-card">
-                <span class="hardware-card-badge">FEATURED RANGE</span>
-                <h3 class="hardware-card-heading">Door Locks & Handles</h3>
-                <p class="hardware-card-sub">Security meets elegant design.</p>
-                <a href="#enquiry" class="hardware-card-link">
+                <span class="hardware-card-badge">VERIFIED HARDWARE</span>
+                <h3 class="hardware-card-heading">Door Locks &amp; Handles</h3>
+                <p class="hardware-card-sub">Digital locks, rim locks &amp; mortise handles.</p>
+                <a href="products/door-locks-architectural-hardware.html" class="hardware-card-link">
                   <span>EXPLORE</span>
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                     <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -784,123 +641,81 @@
 
         </div>
 
-        <!-- 4-Card Hardware Grid Below -->
+        <!-- 4 Verified Hardware Cards Grid -->
         <div class="hardware-sub-grid">
           
-          <!-- Card 1: Digital Access Locks -->
+          <!-- Card 1: Quba Digital Lock -->
           <article class="hardware-sub-card">
             <div class="hardware-sub-image-wrapper">
               <img 
-                src="assets/images/quba_qlick_digital_lock.png" 
-                alt="Quba Qlick 5-Way Access Digital Lock" 
+                src="assets/images/quba-qlick-digital-lock.webp" 
+                alt="Quba Qlick Digital Access Lock" 
                 width="400" 
                 height="300" 
                 loading="lazy">
             </div>
             <div class="hardware-sub-body">
-              <div class="hardware-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-                </svg>
-              </div>
-              <h3 class="hardware-sub-title">DOOR LOCKS & HANDLES</h3>
-              <p class="hardware-sub-desc">Stylish and secure solutions for every space.</p>
+              <h3 class="hardware-sub-title">Quba Digital Access Lock</h3>
+              <p class="hardware-sub-desc">Keyless entry &amp; digital access solutions for main doors.</p>
               <button type="button" class="hardware-sub-link btn-enquire" data-product-code="QUBA-QLICK" data-product-title="Quba Qlick Digital Access Lock">
-                <span>ENQUIRE</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
+                <span>ENQUIRE ON WHATSAPP</span>
               </button>
             </div>
           </article>
 
-          <!-- Card 2: Security Rim Locks -->
+          <!-- Card 2: Quba Rim Lock -->
           <article class="hardware-sub-card">
             <div class="hardware-sub-image-wrapper">
               <img 
-                src="assets/images/quba_stronghold_rim_lock_black_rosegold.png" 
-                alt="Quba Stronghold Dual Cylinder Rim Lock" 
+                src="assets/images/quba-stronghold-rim-lock.webp" 
+                alt="Quba Stronghold Rim Security Lock" 
                 width="400" 
                 height="300" 
                 loading="lazy">
             </div>
             <div class="hardware-sub-body">
-              <div class="hardware-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <path d="M21 2l-2 2m-2-2l2 2M3 13l4 4L19 5l-4-4L3 13z"></path>
-                  <path d="M13 7l2 2"></path>
-                  <path d="M9 11l2 2"></path>
-                </svg>
-              </div>
-              <h3 class="hardware-sub-title">SECURITY RIM LOCKS</h3>
-              <p class="hardware-sub-desc">Strong, smooth and built to last dual-cylinder locks.</p>
+              <h3 class="hardware-sub-title">Security Rim Locks</h3>
+              <p class="hardware-sub-desc">Dual-cylinder security rim locks in premium dark finishes.</p>
               <button type="button" class="hardware-sub-link btn-enquire" data-product-code="QUBA-SH-RIM" data-product-title="Quba Stronghold Rim Lock">
-                <span>ENQUIRE</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
+                <span>ENQUIRE ON WHATSAPP</span>
               </button>
             </div>
           </article>
 
-          <!-- Card 3: Designer Mortise Handles -->
+          <!-- Card 3: Mortise Handles -->
           <article class="hardware-sub-card">
             <div class="hardware-sub-image-wrapper">
               <img 
-                src="assets/images/quba_mortise_handles_wood.png" 
-                alt="Quba Mortise Handles with Wood Finish Inlay" 
+                src="assets/images/quba-mortise-door-handles.webp" 
+                alt="Quba Designer Mortise Handles" 
                 width="400" 
                 height="300" 
                 loading="lazy">
             </div>
             <div class="hardware-sub-body">
-              <div class="hardware-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="5" y="2" width="14" height="20" rx="2"></rect>
-                  <line x1="12" y1="18" x2="12.01" y2="18"></line>
-                </svg>
-              </div>
-              <h3 class="hardware-sub-title">DOOR PULLS & FITTINGS</h3>
-              <p class="hardware-sub-desc">Functional details for a refined finish.</p>
+              <h3 class="hardware-sub-title">Designer Mortise Handles</h3>
+              <p class="hardware-sub-desc">Refined door handles with wood and metallic inlay accents.</p>
               <button type="button" class="hardware-sub-link btn-enquire" data-product-code="QUBA-MORTISE-HANDLE" data-product-title="Quba Mortise Door Handles">
-                <span>ENQUIRE</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
+                <span>ENQUIRE ON WHATSAPP</span>
               </button>
             </div>
           </article>
 
-          <!-- Card 4: Antique Brass Security Lock Fittings -->
+          <!-- Card 4: Hettich Fittings -->
           <article class="hardware-sub-card">
             <div class="hardware-sub-image-wrapper">
               <img 
-                src="assets/images/quba_stronghold_rim_lock_antique_brass.png" 
-                alt="Quba Antique Brass Lock Fittings" 
+                src="assets/images/hettich-hinges-drawer-system.webp" 
+                alt="Hettich Hinges and Drawer Systems" 
                 width="400" 
                 height="300" 
                 loading="lazy">
             </div>
             <div class="hardware-sub-body">
-              <div class="hardware-icon-badge" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <line x1="12" y1="8" x2="12" y2="12"></line>
-                  <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                </svg>
-              </div>
-              <h3 class="hardware-sub-title">ARCHITECTURAL FITTINGS</h3>
-              <p class="hardware-sub-desc">Small details. Big difference.</p>
-              <button type="button" class="hardware-sub-link btn-enquire" data-product-code="QUBA-BRASS-FITTING" data-product-title="Quba Antique Brass Lock Fittings">
-                <span>ENQUIRE</span>
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                  <line x1="5" y1="12" x2="19" y2="12"></line>
-                  <polyline points="12 5 19 12 12 19"></polyline>
-                </svg>
+              <h3 class="hardware-sub-title">Hettich Hinges &amp; Drawer Systems</h3>
+              <p class="hardware-sub-desc">Precision cabinet hinges and smooth sliding drawer hardware.</p>
+              <button type="button" class="hardware-sub-link btn-enquire" data-product-code="HETTICH-HARDWARE" data-product-title="Hettich Cabinet Hinges &amp; Drawer Systems">
+                <span>ENQUIRE ON WHATSAPP</span>
               </button>
             </div>
           </article>
@@ -911,16 +726,341 @@
     </section>
 
     <!-- ================================================================== -->
-    <!-- SECTION 6: ABOUT / BRAND STORY                                     -->
+    <!-- SECTION 06 — MATERIALS FOR INTERIOR SPACES                         -->
+    <!-- ================================================================== -->
+    <section class="section-padding" id="interiors" aria-label="Materials for Interior Spaces">
+      <div class="container" style="max-width: var(--container-max-width); margin-inline: auto; padding-inline: var(--padding-x-mobile);">
+        
+        <div class="categories-header" style="max-width: 800px; margin-bottom: 40px;">
+          <h2 class="categories-h2">Materials for Interior Spaces</h2>
+          <p class="categories-supporting-text">
+            Explore decorative panels, flooring and wall materials for feature walls, living spaces, bedrooms, commercial interiors and other interior applications.
+          </p>
+        </div>
+
+        <div class="categories-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          
+          <!-- Panels Feature Card -->
+          <article class="category-card" id="panels">
+            <div class="category-image-wrapper">
+              <img src="assets/images/brick-mdf-panel-category.webp" alt="BRICK MDF Decorative Panels" width="600" height="450" loading="lazy">
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Decorative Panels for Feature Walls &amp; Interiors</h3>
+              <p class="category-card-desc">
+                BRICK MDF panels (8 × 4 ft, 6 mm) available in Red Brick, Rustic Brick, Rustic Gray, White Gray &amp; Full White finishes.
+              </p>
+              <a href="products/panels-pappinisseri.html" class="category-card-footer">
+                <span>Explore Panels</span>
+                <svg class="category-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Flooring Feature Card -->
+          <article class="category-card" id="flooring">
+            <div class="category-image-wrapper">
+              <img src="assets/images/madera-engineered-wood-flooring.webp" alt="Wood & Laminate Flooring" width="600" height="450" loading="lazy">
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Wood &amp; Laminate Flooring for Interior Spaces</h3>
+              <p class="category-card-desc">
+                Madera 3-layer engineered wood flooring &amp; Classic Series 8mm AC4 laminate flooring with German locking systems.
+              </p>
+              <a href="products/flooring-pappinisseri.html" class="category-card-footer">
+                <span>Explore Flooring</span>
+                <svg class="category-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Wall & Decorative Feature Card -->
+          <article class="category-card" id="wall-decorative">
+            <div class="category-image-wrapper">
+              <img src="assets/images/wall-decorative-category.webp" alt="Wall & Decorative Materials" width="600" height="450" loading="lazy">
+            </div>
+            <div class="category-card-body">
+              <h3 class="category-card-title">Wall &amp; Decorative Materials for Interior Finishes</h3>
+              <p class="category-card-desc">
+                Textured cladding, surface finishes and decorative accent materials for residential and commercial interiors.
+              </p>
+              <a href="products/wall-decorative-materials.html" class="category-card-footer">
+                <span>Explore Wall &amp; Decorative Materials</span>
+                <svg class="category-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- SECTION 07 — KITCHEN HARDWARE                                      -->
+    <!-- ================================================================== -->
+    <section class="section-padding" id="kitchen-hardware-section" aria-label="Kitchen Hardware">
+      <div class="container" style="max-width: var(--container-max-width); margin-inline: auto; padding-inline: var(--padding-x-mobile);">
+        <div class="categories-grid" style="grid-template-columns: 1fr;">
+          <article class="category-card" style="display: grid; grid-template-columns: 1fr; gap: 24px; padding: 24px;" class="kitchen-hardware-card">
+            <div class="category-image-wrapper" style="border-radius: 12px; overflow: hidden; aspect-ratio: 16/9;">
+              <img src="assets/images/hettich-hinges-drawer-system.webp" alt="Kitchen Hardware and Cabinet Fittings" style="width: 100%; height: 100%; object-fit: cover;" loading="lazy">
+            </div>
+            <div class="category-card-body" style="justify-content: center; padding: 0;">
+              <span class="category-card-title" style="font-size: 12px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-champagne-gold); margin-bottom: 8px; display: block;">CABINETRY &amp; FURNITURE FITTINGS</span>
+              <h2 style="font-size: clamp(24px, 3vw, 36px); font-weight: 700; color: var(--color-primary-text); margin-bottom: 12px;">Kitchen Hardware for Cabinets, Furniture &amp; Everyday Function</h2>
+              <p style="font-size: 15px; color: var(--color-muted-text); line-height: 1.6; margin-bottom: 20px;">
+                Explore functional hardware and fittings for kitchens, cabinets and furniture — soft-close hinges, drawer runners, pulls and organizational fittings.
+              </p>
+              <div>
+                <a href="products/kitchen-hardware-pappinisseri.html" class="btn-primary-action">Explore Kitchen Hardware Category</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- SECTION 08 — PAINTS & ADHESIVES / BUILDING MATERIALS               -->
+    <!-- ================================================================== -->
+    <section class="section-padding" id="paints-adhesives-section" aria-label="Paints, Adhesives & Building Materials">
+      <div class="container" style="max-width: var(--container-max-width); margin-inline: auto; padding-inline: var(--padding-x-mobile);">
+        <div style="background-color: var(--color-card-bg); border: 1px solid var(--color-border); border-radius: var(--radius-card); padding: 32px 24px; display: flex; flex-direction: column; gap: 16px;">
+          <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--color-champagne-gold);">FINISHING &amp; BONDING MATERIALS</span>
+          <h2 style="font-size: clamp(24px, 3vw, 36px); font-weight: 700; color: var(--color-primary-text);">Paints, Adhesives &amp; Materials for Finishing Work</h2>
+          <p style="font-size: 15px; color: var(--color-muted-text); line-height: 1.6; max-width: 760px;">
+            Explore materials used for finishing, bonding and related building requirements for interior woodworking, carpentry and structural work.
+          </p>
+          <div style="margin-top: 8px;">
+            <a href="products/paints-adhesives-building-materials.html" class="btn-secondary-action">Explore Paints &amp; Adhesives Category</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- SECTION 09 — PROJECT-BASED DISCOVERY ("What Are You Working On?")    -->
+    <!-- ================================================================== -->
+    <section class="projects-discovery-section" id="projects-discovery" aria-label="Project Based Discovery">
+      <div class="projects-container">
+        
+        <div class="projects-header">
+          <span class="hero-eyebrow" style="color: var(--color-champagne-gold);">NAVIGATION BY USE CASE</span>
+          <h2 class="categories-h2" style="font-size: clamp(28px, 3.5vw, 42px); font-weight: 700; color: var(--color-primary-text); margin-top: 8px;">What Are You Working On?</h2>
+          <p class="categories-supporting-text" style="font-size: 15px; color: var(--color-muted-text); margin-top: 12px;">
+            Tell us what you're working on and explore the material categories commonly used for it.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- Project 1: Furniture -->
+          <a href="products/plywood-pappinisseri.html" class="project-card">
+            <div class="project-card-header">
+              <div class="project-icon-wrapper" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 9V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v3"></path><path d="M2 11v5a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"></path><path d="M4 18v2"></path><path d="M20 18v2"></path></svg>
+              </div>
+              <span class="project-material-tags">Plywood · Hardware</span>
+            </div>
+            <h3 class="project-card-title">Furniture Work</h3>
+            <div class="project-card-footer">
+              <span>Browse Furniture Materials</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+
+          <!-- Project 2: Kitchen -->
+          <a href="products/kitchen-hardware-pappinisseri.html" class="project-card">
+            <div class="project-card-header">
+              <div class="project-icon-wrapper" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path><path d="M9 21V9"></path></svg>
+              </div>
+              <span class="project-material-tags">Plywood · Kitchen Hardware · Adhesives</span>
+            </div>
+            <h3 class="project-card-title">Kitchen Cabinets &amp; Shutters</h3>
+            <div class="project-card-footer">
+              <span>Browse Kitchen Materials</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+
+          <!-- Project 3: Wardrobe -->
+          <a href="products/door-locks-architectural-hardware.html" class="project-card">
+            <div class="project-card-header">
+              <div class="project-icon-wrapper" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="2" width="18" height="20" rx="2"></rect><line x1="12" y1="2" x2="12" y2="22"></line></svg>
+              </div>
+              <span class="project-material-tags">Plywood · Hardware</span>
+            </div>
+            <h3 class="project-card-title">Wardrobe &amp; Storage</h3>
+            <div class="project-card-footer">
+              <span>Browse Wardrobe Materials</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+
+          <!-- Project 4: Doors -->
+          <a href="products/door-locks-architectural-hardware.html" class="project-card">
+            <div class="project-card-header">
+              <div class="project-icon-wrapper" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 20V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16"></path><circle cx="14" cy="12" r="1"></circle></svg>
+              </div>
+              <span class="project-material-tags">Plywood · Locks · Handles · Hinges</span>
+            </div>
+            <h3 class="project-card-title">Doors &amp; Entryways</h3>
+            <div class="project-card-footer">
+              <span>Browse Door Hardware</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+
+          <!-- Project 5: Interior Work -->
+          <a href="products/panels-pappinisseri.html" class="project-card">
+            <div class="project-card-header">
+              <div class="project-icon-wrapper" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 12h18"></path><path d="M12 3v18"></path></svg>
+              </div>
+              <span class="project-material-tags">Panels · Flooring · Decorative</span>
+            </div>
+            <h3 class="project-card-title">Interior Wall &amp; Floor Finishes</h3>
+            <div class="project-card-footer">
+              <span>Browse Interior Materials</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+
+          <!-- Project 6: Construction -->
+          <a href="products/paints-adhesives-building-materials.html" class="project-card">
+            <div class="project-card-header">
+              <div class="project-icon-wrapper" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+              </div>
+              <span class="project-material-tags">Plywood · Hardware · Building Materials</span>
+            </div>
+            <h3 class="project-card-title">Construction &amp; Building Work</h3>
+            <div class="project-card-footer">
+              <span>Browse Building Materials</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- SECTION 10 — FEATURED MATERIALS / PRODUCT RAIL                     -->
+    <!-- ================================================================== -->
+    <section class="product-rail-section" id="product-rail" aria-label="Featured Materials Showcase">
+      <div class="product-rail-container">
+        
+        <div class="categories-header" style="max-width: 800px; margin-bottom: 32px;">
+          <span class="hero-eyebrow" style="color: var(--color-champagne-gold);">CURATED SHOWCASE</span>
+          <h2 class="categories-h2">Selected Materials Available at The Hub</h2>
+          <p class="categories-supporting-text">
+            A closer look at selected products and collections from our current range.
+          </p>
+        </div>
+
+        <div class="product-rail-wrapper">
+          
+          <!-- Item 1: Classic Plywood -->
+          <a href="classic-plywood-pappinisseri.html" class="product-rail-card">
+            <div class="product-rail-img-wrapper">
+              <img src="assets/images/classic-plywood-board.webp" alt="Classic Plywood Architectural Grade" loading="lazy">
+            </div>
+            <div class="product-rail-body">
+              <span class="product-rail-category">OWN BRAND PLYWOOD</span>
+              <h3 class="product-rail-title">Classic Plywood</h3>
+              <p class="product-rail-desc">Plywood range for interior, furniture, kitchen &amp; construction applications.</p>
+              <div class="product-rail-action">
+                <span>View Details</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 2: Hettich Hardware -->
+          <a href="products/door-locks-architectural-hardware.html" class="product-rail-card">
+            <div class="product-rail-img-wrapper">
+              <img src="assets/images/hettich-hinges-drawer-system.webp" alt="Hettich Hinges and Hardware" loading="lazy">
+            </div>
+            <div class="product-rail-body">
+              <span class="product-rail-category">VERIFIED HARDWARE</span>
+              <h3 class="product-rail-title">Hettich Cabinet Hinges</h3>
+              <p class="product-rail-desc">Soft-close cabinet hinges &amp; precision sliding drawer hardware.</p>
+              <div class="product-rail-action">
+                <span>View Category</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 3: BRICK MDF Panels -->
+          <a href="products/panels-pappinisseri.html" class="product-rail-card">
+            <div class="product-rail-img-wrapper">
+              <img src="assets/images/brick-mdf-panel-category.webp" alt="BRICK MDF Decorative Panel" loading="lazy">
+            </div>
+            <div class="product-rail-body">
+              <span class="product-rail-category">WALL PANELS</span>
+              <h3 class="product-rail-title">BRICK MDF Panels</h3>
+              <p class="product-rail-desc">8 × 4 ft, 6 mm brick-look decorative MDF wall panels in 5 finishes.</p>
+              <div class="product-rail-action">
+                <span>View Category</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 4: Madera Flooring -->
+          <a href="products/flooring-pappinisseri.html" class="product-rail-card">
+            <div class="product-rail-img-wrapper">
+              <img src="assets/images/madera-engineered-wood-flooring.webp" alt="Madera Engineered Flooring" loading="lazy">
+            </div>
+            <div class="product-rail-body">
+              <span class="product-rail-category">WOOD FLOORING</span>
+              <h3 class="product-rail-title">Madera Engineered Flooring</h3>
+              <p class="product-rail-desc">3-layer engineered hardwood flooring for residential &amp; commercial interiors.</p>
+              <div class="product-rail-action">
+                <span>View Category</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </div>
+          </a>
+
+          <!-- Item 5: Classic Series Flooring -->
+          <a href="products/flooring-pappinisseri.html" class="product-rail-card">
+            <div class="product-rail-img-wrapper">
+              <img src="assets/images/classic-series-teak-flooring.webp" alt="Classic Series Laminate Flooring" loading="lazy">
+            </div>
+            <div class="product-rail-body">
+              <span class="product-rail-category">LAMINATE FLOORING</span>
+              <h3 class="product-rail-title">Classic Series AC4 Flooring</h3>
+              <p class="product-rail-desc">8 mm AC-4 wax-coated lock laminate flooring with German locking system.</p>
+              <div class="product-rail-action">
+                <span>View Category</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </div>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- SECTION 11 — WHY THE HUB / LOCAL STORE                             -->
     <!-- ================================================================== -->
     <section class="about-section" id="about" aria-label="About THE HUB CHUNGAM TRADERS">
       <div class="about-container">
         
-        <!-- Left Column: Large Architectural Image (4:5 Aspect Ratio) -->
         <div class="about-visual-column">
           <div class="about-image-frame">
             <img 
-              src="assets/images/hero_showroom.jpg" 
+              src="assets/images/showroom-interior-store.webp" 
               alt="THE HUB CHUNGAM TRADERS Interior Material Showroom" 
               width="600" 
               height="750" 
@@ -928,36 +1068,33 @@
           </div>
         </div>
 
-        <!-- Right Column: Brand Story Content -->
         <div class="about-content-column">
           <span class="about-eyebrow">THE HUB CHUNGAM TRADERS</span>
           
-          <h2 class="about-h2">Local Materials Destination in Pappinisseri</h2>
+          <h2 class="about-h2">A Local Materials Store in Pappinisseri</h2>
 
-          <!-- One Thin Gold Vertical Detail -->
           <div class="about-gold-vertical-accent" aria-hidden="true"></div>
 
           <p class="about-paragraph">
-            THE HUB CHUNGAM TRADERS is a local materials destination for plywood, kitchen doors, flooring and related building and interior materials.
+            The Hub Chungam Traders brings multiple material categories together in one local store, serving requirements across interiors, furniture, kitchens, doors and construction.
           </p>
 
           <p class="about-paragraph">
-            Serving customers, interior contractors, and carpenters from Chungam, Pappinisseri, and the surrounding Kannur area.
+            Serving homeowners, interior contractors, carpenters, and builders from Chungam, Pappinisseri, and the wider Kannur region since 2018.
           </p>
 
-          <!-- Verified Business Information List -->
           <ul class="about-info-list">
             <li class="about-info-item">
               <span class="about-info-label">Established:</span>
               <span class="about-info-value">2018</span>
             </li>
             <li class="about-info-item">
-              <span class="about-info-label">Location:</span>
-              <span class="about-info-value">15/600-A, Chungam Complex, Near Post Office, Pappinisseri, Kannur</span>
+              <span class="about-info-label">Material Categories:</span>
+              <span class="about-info-value">Plywood, Hardware, Panels, Flooring, Kitchen Hardware, Paints &amp; Adhesives</span>
             </li>
             <li class="about-info-item">
-              <span class="about-info-label">Material Focus:</span>
-              <span class="about-info-value">Plywood, Kitchen Doors, Flooring & Related Fittings</span>
+              <span class="about-info-label">Location:</span>
+              <span class="about-info-value">15/600-A, Chungam Complex, Near Post Office, Pappinisseri, Kannur</span>
             </li>
           </ul>
         </div>
@@ -966,28 +1103,98 @@
     </section>
 
     <!-- ================================================================== -->
-    <!-- SECTION 7: CONTACT / PRODUCT ENQUIRY CTA                           -->
+    <!-- SECTION 12 — STORE / LOCATION                                      -->
     <!-- ================================================================== -->
-    <section class="contact-cta-section" id="enquiry" aria-label="Product Enquiry">
-      <div class="contact-cta-container">
+    <section class="location-section" id="location" aria-label="Showroom Location and Contact">
+      <div class="location-container">
         
-        <!-- Left Information Column -->
-        <div class="contact-cta-info">
-          <span class="contact-cta-eyebrow">DIRECT SHOWROOM ENQUIRY</span>
-          <h2 class="contact-cta-h2">Looking for a specific material?</h2>
-          <p class="contact-cta-supporting">
-            Tell us what you're looking for and contact us directly for product enquiries.
+        <div class="location-details-card">
+          <div>
+            <span class="floating-card-eyebrow" style="color: var(--color-champagne-gold); margin-bottom: 8px; display: block;">PAPPINISSERI SHOWROOM</span>
+            <h2 class="location-brand-name" style="font-size: 28px; font-weight: 700;">Visit The Hub Chungam Traders in Pappinisseri</h2>
+            
+            <address class="location-address-block" style="margin-top: 16px;">
+              <span class="location-address-line">15/600-A, CHUNGAM COMPLEX</span>
+              <span class="location-address-line">NEAR POST OFFICE,</span>
+              <span class="location-address-line">CHUNGAM PAPPINISSERI</span>
+              <span class="location-address-line">KANNUR - 670 561, KERALA</span>
+            </address>
+          </div>
+
+          <div class="location-contact-list">
+            <div class="location-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span><strong>Phone:</strong> 8088729972</span>
+            </div>
+
+            <div class="location-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span><strong>Email:</strong> chungamtraders2018@gmail.com</span>
+            </div>
+            
+            <div class="location-contact-item">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span><strong>Hours:</strong> Mon–Sat: 9:00 AM – 8:00 PM</span>
+            </div>
+          </div>
+
+          <div class="location-action-btn-group">
+            <a href="tel:8088729972" class="btn-location-action btn-location-call">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <span>CALL NOW</span>
+            </a>
+            <a href="https://wa.me/918088729972?text=Hi%2C%20I%20would%20like%20to%20visit%20The%20Hub%20Chungam%20Traders%20showroom." target="_blank" rel="noopener noreferrer" class="btn-location-action btn-location-email">
+              <span>WHATSAPP US</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="location-map-panel">
+          <div class="map-icon-box" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          </div>
+
+          <h3 class="map-panel-title">Get Directions</h3>
+
+          <p class="map-panel-address">
+            15/600-A, CHUNGAM COMPLEX, NEAR POST OFFICE, CHUNGAM PAPPINISSERI, KANNUR - 670 561
           </p>
 
-          <div class="contact-direct-card">
-            <span class="contact-direct-title">Direct Showroom Contact</span>
-            <a href="tel:8088729972" class="contact-direct-link">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span>Ph: 8088729972</span>
+          <a 
+            href="https://www.google.com/maps/search/?api=1&query=15%2F600-A%2C+CHUNGAM+COMPLEX%2C+NEAR+POST+OFFICE%2C+CHUNGAM+PAPPINISSERI%2C+KANNUR+-+670+561" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            class="btn-get-directions">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            <span>GET DIRECTIONS ON GOOGLE MAPS</span>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ================================================================== -->
+    <!-- SECTION 13 — FINAL CTA & ENQUIRY                                   -->
+    <!-- ================================================================== -->
+    <section class="contact-cta-section" id="enquiry" aria-label="Product Enquiry Form">
+      <div class="contact-cta-container">
+        
+        <div class="contact-cta-info">
+          <span class="contact-cta-eyebrow">DIRECT SHOWROOM ENQUIRY</span>
+          <h2 class="contact-cta-h2">Have a Material Requirement?</h2>
+          <p class="contact-cta-supporting">
+            Tell us what you're looking for and we'll help you find the relevant category or product.
+          </p>
+
+          <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 24px;">
+            <a href="https://wa.me/918088729972?text=Hi%2C%20I%20have%20a%20material%20requirement%20for%20my%20project." target="_blank" rel="noopener noreferrer" class="btn-primary-action" style="text-align: center;">
+              WhatsApp Enquiry
             </a>
-            <a href="mailto:chungamtraders2018@gmail.com" class="contact-direct-link">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span>Email: chungamtraders2018@gmail.com</span>
+            <a href="tel:8088729972" class="btn-secondary-action" style="text-align: center;">
+              Call Showroom (8088729972)
+            </a>
+            <a href="https://www.google.com/maps/search/?api=1&query=15%2F600-A%2C+CHUNGAM+COMPLEX%2C+NEAR+POST+OFFICE%2C+CHUNGAM+PAPPINISSERI%2C+KANNUR+-+670+561" target="_blank" rel="noopener noreferrer" class="btn-secondary-action" style="text-align: center;">
+              Get Directions
             </a>
           </div>
         </div>
@@ -1021,11 +1228,14 @@
               <select id="enquiryCategory" class="form-select" required>
                 <option value="" disabled selected>Select category...</option>
                 <option value="Plywood">Plywood</option>
-                <option value="Kitchen Doors">Kitchen Doors</option>
+                <option value="Classic Plywood">Classic Plywood</option>
+                <option value="Door Locks & Hardware">Door Locks &amp; Architectural Hardware</option>
+                <option value="Panels">Panels</option>
                 <option value="Flooring">Flooring</option>
-                <option value="Hardware">Hardware</option>
-                <option value="Decorative MDF Panels">Decorative MDF Panels</option>
-                <option value="Other">Other</option>
+                <option value="Wall & Decorative">Wall &amp; Decorative Materials</option>
+                <option value="Kitchen Hardware">Kitchen Hardware</option>
+                <option value="Paints & Adhesives">Paints &amp; Adhesives</option>
+                <option value="Other">Other Requirement</option>
               </select>
             </div>
 
@@ -1038,7 +1248,7 @@
             </div>
 
             <button type="submit" class="btn-submit-enquiry">
-              SEND ENQUIRY
+              SEND ENQUIRY ON WHATSAPP
             </button>
 
           </form>
@@ -1047,78 +1257,10 @@
       </div>
     </section>
 
-    <!-- ================================================================== -->
-    <!-- SECTION 8: LOCATION + CONTACT                                      -->
-    <!-- ================================================================== -->
-    <section class="location-section" id="location" aria-label="Showroom Location and Contact">
-      <div class="location-container">
-        
-        <!-- Left Column: Verified Location & Contact Details -->
-        <div class="location-details-card">
-          <div>
-            <h3 class="location-brand-name">THE HUB CHUNGAM TRADERS</h3>
-            
-            <address class="location-address-block">
-              <span class="location-address-line">15/600-A, CHUNGAM COMPLEX</span>
-              <span class="location-address-line">NEAR POST OFFICE,</span>
-              <span class="location-address-line">CHUNGAM PAPPINISSERI</span>
-              <span class="location-address-line">KANNUR - 670 561</span>
-            </address>
-          </div>
-
-          <div class="location-contact-list">
-            <div class="location-contact-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span><strong>Phone:</strong> 8088729972</span>
-            </div>
-
-            <div class="location-contact-item">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span><strong>Email:</strong> chungamtraders2018@gmail.com</span>
-            </div>
-          </div>
-
-          <div class="location-action-btn-group">
-            <a href="tel:8088729972" class="btn-location-action btn-location-call">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              <span>CALL NOW</span>
-            </a>
-            <a href="mailto:chungamtraders2018@gmail.com" class="btn-location-action btn-location-email">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              <span>EMAIL US</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Right Column: Performance-Focused Location & Directions Panel -->
-        <div class="location-map-panel">
-          <div class="map-icon-box" aria-hidden="true">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-          </div>
-
-          <h3 class="map-panel-title">Visit Our Showroom</h3>
-
-          <p class="map-panel-address">
-            15/600-A, CHUNGAM COMPLEX, NEAR POST OFFICE, CHUNGAM PAPPINISSERI, KANNUR - 670 561
-          </p>
-
-          <a 
-            href="https://www.google.com/maps/search/?api=1&query=15%2F600-A%2C+CHUNGAM+COMPLEX%2C+NEAR+POST+OFFICE%2C+CHUNGAM+PAPPINISSERI%2C+KANNUR+-+670+561" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="btn-get-directions">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            <span>GET DIRECTIONS</span>
-          </a>
-        </div>
-
-      </div>
-    </section>
-
   </main>
 
   <!-- ==================================================================== -->
-  <!-- SECTION 9: FOOTER                                                    -->
+  <!-- FOOTER                                                               -->
   <!-- ==================================================================== -->
   <footer class="site-footer" id="footer">
     <div class="footer-container">
@@ -1127,7 +1269,7 @@
         
         <!-- Column 1: Brand & Descriptor -->
         <div class="footer-brand-col">
-          <a href="#home" aria-label="THE HUB CHUNGAM TRADERS Home">
+          <a href="index.html" aria-label="THE HUB CHUNGAM TRADERS Home">
             <img 
               src="assets/images/chungam-traders-logo.svg" 
               alt="THE HUB CHUNGAM TRADERS" 
@@ -1137,25 +1279,44 @@
               loading="lazy">
           </a>
           <p class="footer-brand-descriptor">
-            PLYWOOD | KITCHEN DOOR | FLOORING
+            Plywood, Architectural Hardware &amp; Building Materials destination in Pappinisseri, Kannur. Est. 2018. Quality solutions for interior contractors, designers, carpenters and homeowners.
           </p>
         </div>
 
-        <!-- Column 2: Quick Links -->
+        <!-- Column 2: Materials Categories -->
         <div>
-          <h4 class="footer-col-title">QUICK LINKS</h4>
+          <h4 class="footer-col-title">MATERIALS</h4>
           <ul class="footer-nav-list">
-            <li><a href="#home" class="footer-nav-link">Home</a></li>
-            <li><a href="#products" class="footer-nav-link">Products</a></li>
-            <li><a href="#about" class="footer-nav-link">About</a></li>
-            <li><a href="#enquiry" class="footer-nav-link">Contact</a></li>
+            <li><a href="products/plywood-pappinisseri.html" class="footer-nav-link">Plywood</a></li>
+            <li><a href="products/door-locks-architectural-hardware.html" class="footer-nav-link">Door Locks &amp; Hardware</a></li>
+            <li><a href="products/panels-pappinisseri.html" class="footer-nav-link">Panels</a></li>
+            <li><a href="products/flooring-pappinisseri.html" class="footer-nav-link">Flooring</a></li>
+            <li><a href="products/wall-decorative-materials.html" class="footer-nav-link">Wall &amp; Decorative</a></li>
+            <li><a href="products/kitchen-hardware-pappinisseri.html" class="footer-nav-link">Kitchen Hardware</a></li>
+            <li><a href="products/paints-adhesives-building-materials.html" class="footer-nav-link">Paints &amp; Adhesives</a></li>
           </ul>
         </div>
 
-        <!-- Column 3: Contact Details -->
+        <!-- Column 3: Navigation -->
         <div>
-          <h4 class="footer-col-title">CONTACT</h4>
+          <h4 class="footer-col-title">EXPLORE</h4>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Home</a></li>
+            <li><a href="classic-plywood-pappinisseri.html" class="footer-nav-link">Classic Plywood</a></li>
+            <li><a href="#about" class="footer-nav-link">About Us</a></li>
+            <li><a href="#about" class="footer-nav-link">Why The Hub</a></li>
+            <li><a href="#location" class="footer-nav-link">Visit Store</a></li>
+            <li><a href="https://wa.me/918088729972?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20building%20materials%20available%20at%20The%20Hub%20Chungam%20Traders." target="_blank" rel="noopener noreferrer" class="footer-nav-link">WhatsApp Enquiry</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Contact & Hours Details -->
+        <div>
+          <h4 class="footer-col-title">SHOWROOM INFO</h4>
           <ul class="footer-contact-list">
+            <li>
+              <strong>Hours:</strong> Mon–Sat: 9:00 AM–8:00 PM | Sun: Closed
+            </li>
             <li>
               <strong>Ph:</strong> 
               <a href="tel:8088729972" class="footer-contact-link">8088729972</a>
@@ -1165,7 +1326,7 @@
               <a href="mailto:chungamtraders2018@gmail.com" class="footer-contact-link">chungamtraders2018@gmail.com</a>
             </li>
             <li class="footer-address-text">
-              15/600-A, CHUNGAM COMPLEX, NEAR POST OFFICE, CHUNGAM PAPPINISSERI, KANNUR - 670 561
+              15/600-A, Chungam Complex, Near Post Office, Chungam Pappinisseri, Kannur, Kerala - 670 561
             </li>
           </ul>
         </div>
@@ -1174,7 +1335,8 @@
 
       <!-- Bottom Bar Divider & Copyright -->
       <div class="footer-bottom-bar">
-        <p>© The Hub Chungam Traders. All rights reserved.</p>
+        <p>© 2018–2026 The Hub Chungam Traders. All rights reserved.</p>
+        <p>Pappinisseri, Kannur, Kerala</p>
       </div>
 
     </div>
@@ -1183,3 +1345,4 @@
   <script src="main.js"></script>
 </body>
 </html>
+

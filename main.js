@@ -2,11 +2,12 @@
  * THE HUB CHUNGAM TRADERS - SECTIONS 1 TO 7 FRONTEND LOGIC
  */
 
-// Configurable WhatsApp parameter (Keep as REPLACE_AFTER_CONFIRMATION until confirmed)
-const WHATSAPP_NUMBER = "REPLACE_AFTER_CONFIRMATION";
+// Configurable WhatsApp parameter (Confirmed phone number for direct enquiries)
+const WHATSAPP_NUMBER = "918088729972";
 
 document.addEventListener('DOMContentLoaded', () => {
   initMobileHeaderNav();
+  initDesktopDropdownNav();
   initHeaderScroll();
   initCustomCursor();
   initHeroMaterialSwitcher();
@@ -15,7 +16,67 @@ document.addEventListener('DOMContentLoaded', () => {
   initEnquiryButtons();
   initBrickVariantSelector();
   initContactCtaForm();
+  initFaqAccordion();
+  initHardwareFilters();
+  initProductModal();
 });
+
+/**
+ * Standardized Contextual WhatsApp URL Generator
+ */
+function getWhatsAppUrl(context = 'general', details = '') {
+  let msg = "Hi, I would like to enquire about building materials available at The Hub Chungam Traders.";
+  if (context === 'plywood') {
+    msg = "Hi, I would like to enquire about plywood available at The Hub Chungam Traders.";
+  } else if (context === 'classic') {
+    msg = "Hi, I would like to enquire about Classic Plywood available at The Hub Chungam Traders.";
+  } else if (context === 'hardware') {
+    msg = "Hi, I would like to enquire about door locks and architectural hardware available at The Hub Chungam Traders.";
+  } else if (context === 'panels') {
+    msg = "Hi, I would like to enquire about decorative wall panels available at The Hub Chungam Traders.";
+  } else if (context === 'flooring') {
+    msg = "Hi, I would like to enquire about wood and laminate flooring available at The Hub Chungam Traders.";
+  } else if (details) {
+    msg = `Hi, I would like to enquire about ${details} available at The Hub Chungam Traders.`;
+  }
+  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(msg)}`;
+}
+
+/**
+ * Desktop Dropdown Accessibility & Navigation
+ */
+function initDesktopDropdownNav() {
+  const dropdownContainers = document.querySelectorAll('.desktop-dropdown-container');
+  
+  dropdownContainers.forEach(container => {
+    const trigger = container.querySelector('.nav-link-dropdown');
+    if (!trigger) return;
+
+    trigger.addEventListener('click', (e) => {
+      // Toggle dropdown open class for click/touch accessibility
+      if (window.innerWidth < 1024) return;
+      e.preventDefault();
+      const isExpanded = container.classList.contains('open');
+      container.classList.toggle('open', !isExpanded);
+      trigger.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!container.contains(e.target)) {
+        container.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    container.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        container.classList.remove('open');
+        trigger.setAttribute('aria-expanded', 'false');
+        trigger.focus();
+      }
+    });
+  });
+}
 
 /**
  * Global Image Fallback System (Guarantees zero broken image icons or white boxes)
@@ -72,8 +133,10 @@ function initScrollObserver() {
 function initMobileHeaderNav() {
   const menuToggle = document.getElementById('menuToggle');
   const mobileNavPanel = document.getElementById('mobileNavPanel');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link, .mobile-sub-link');
   const mobileNavActions = document.querySelectorAll('.mobile-nav-actions a');
+  const accordionToggle = document.getElementById('mobileMaterialsAccordionBtn');
+  const accordionItem = document.getElementById('mobileMaterialsAccordion');
 
   if (!menuToggle || !mobileNavPanel) return;
 
@@ -87,6 +150,15 @@ function initMobileHeaderNav() {
   }
 
   menuToggle.addEventListener('click', () => toggleMobileMenu());
+
+  if (accordionToggle && accordionItem) {
+    accordionToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isExpanded = accordionItem.classList.contains('expanded');
+      accordionItem.classList.toggle('expanded', !isExpanded);
+      accordionToggle.setAttribute('aria-expanded', !isExpanded ? 'true' : 'false');
+    });
+  }
 
   [...mobileNavLinks, ...mobileNavActions].forEach(link => {
     link.addEventListener('click', () => toggleMobileMenu(false));
@@ -405,6 +477,128 @@ function initHeroMaterialSwitcher() {
         e.preventDefault();
         selectTab(tab);
       }
+    });
+  });
+}
+
+/**
+ * Handle FAQ Accordion Item Expand / Collapse
+ */
+function initFaqAccordion() {
+  const faqTriggers = document.querySelectorAll('.faq-trigger');
+
+  faqTriggers.forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      const item = trigger.closest('.faq-item');
+      if (!item) return;
+
+      const isActive = item.classList.contains('active');
+      
+      // Close other active items if desired
+      document.querySelectorAll('.faq-item.active').forEach(other => {
+        if (other !== item) other.classList.remove('active');
+      });
+
+      item.classList.toggle('active', !isActive);
+      trigger.setAttribute('aria-expanded', !isActive ? 'true' : 'false');
+    });
+  });
+}
+
+/**
+ * Category Filter Switcher (Desktop & Mobile)
+ */
+function initHardwareFilters() {
+  const filterPills = document.querySelectorAll('.filter-bar .filter-pill');
+  const cards = document.querySelectorAll('[data-category]');
+
+  if (!filterPills.length || !cards.length) return;
+
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+
+      const targetFilter = pill.getAttribute('data-filter') || 'all';
+
+      cards.forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (targetFilter === 'all' || cardCat === targetFilter) {
+          card.style.display = '';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+/**
+ * Quick-Detail Product Modal Handler
+ */
+function initProductModal() {
+  const modalBackdrop = document.getElementById('productModal');
+  if (!modalBackdrop) return;
+
+  const modalImg = modalBackdrop.querySelector('.modal-product-img');
+  const modalBadge = modalBackdrop.querySelector('.modal-category-badge');
+  const modalTitle = modalBackdrop.querySelector('.modal-product-title');
+  const modalSpecList = modalBackdrop.querySelector('.modal-spec-list');
+  const modalCtaBtn = modalBackdrop.querySelector('.btn-modal-whatsapp');
+  const closeBtn = modalBackdrop.querySelector('.modal-close-btn');
+
+  function closeModal() {
+    modalBackdrop.classList.remove('open');
+    modalBackdrop.setAttribute('aria-hidden', 'true');
+  }
+
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeModal);
+  }
+
+  modalBackdrop.addEventListener('click', (e) => {
+    if (e.target === modalBackdrop) closeModal();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modalBackdrop.classList.contains('open')) closeModal();
+  });
+
+  // Attach quick-detail openers to verified product cards
+  document.querySelectorAll('.product-card[data-modal-title]').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Don't open if clicked direct button
+      if (e.target.closest('a, button')) return;
+
+      const title = card.getAttribute('data-modal-title') || '';
+      const category = card.getAttribute('data-modal-category') || 'HARDWARE';
+      const imgSrc = card.getAttribute('data-modal-img') || '';
+      const specsRaw = card.getAttribute('data-modal-specs') || '';
+
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalBadge) modalBadge.textContent = category;
+      if (modalImg && imgSrc) modalImg.src = imgSrc;
+
+      if (modalSpecList) {
+        modalSpecList.innerHTML = '';
+        if (specsRaw) {
+          specsRaw.split('|').forEach(spec => {
+            if (spec.trim()) {
+              const li = document.createElement('li');
+              li.className = 'modal-spec-item';
+              li.textContent = spec.trim();
+              modalSpecList.appendChild(li);
+            }
+          });
+        }
+      }
+
+      if (modalCtaBtn) {
+        modalCtaBtn.href = getWhatsAppUrl('hardware', title);
+      }
+
+      modalBackdrop.classList.add('open');
+      modalBackdrop.setAttribute('aria-hidden', 'false');
     });
   });
 }
